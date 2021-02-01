@@ -61,8 +61,6 @@ if __name__ == "__main__":
     for fileName in os.listdir(scriptDir):
         if not os.path.isdir(os.path.join(scriptDir, fileName)):
             if fileName in IGNORE_FILES: continue
-            
-            # print("Would have uploaded file: {}".format(fileName))
             upload_file(os.path.join(scriptDir, fileName), AWS_WEBSITE_BUCKET_NAME, fileName, determine_content_type(fileName))
 
     # For each subDir within the top-level directory, upload all files using an ObjectName of subdir/fileName
@@ -71,5 +69,4 @@ if __name__ == "__main__":
         if subDir in IGNORE_DIRS: continue
         for fileName in os.listdir(os.path.join(scriptDir, subDir)):
             if fileName in IGNORE_FILES: continue
-            # print("Would have uploaded file: {}".format(os.path.join(subDir, fileName)))
             upload_file(os.path.join(scriptDir, subDir, fileName), AWS_WEBSITE_BUCKET_NAME, os.path.join(subDir, fileName), determine_content_type(fileName))            
