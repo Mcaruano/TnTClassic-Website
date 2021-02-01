@@ -128,25 +128,16 @@ p strong { font-weight:bold; }
 .row .col.lottery-content, .row .col.priority-content{ /*min-height:200px;*/ margin-bottom:20px;}
 
 .loot-config-list-label { font-size:12px; font-weight:bold; color:#000; text-transform: uppercase; margin-bottom:8px; /*text-align:center;*/ }
-.loot-config-list ol { padding-inline-start: 20px; color:#9C9C9C; font-size:12px; margin-top:8px; }
-.loot-config-list ol li { counter-increment: list; list-style-type: none; position: relative; }
-.loot-config-list ol li:before {
-  color:#9C9C9C;
-  content: counter(list) "."  ;
-  left:-32px;
-  position: absolute;
-  text-align: right;
-  width: 26px;
-}
-.loot-config-list ol li, .loot-config-list ol li a { padding-left:2px; padding-bottom:2px; color:#000;}
-/*.loot-config-list ol li a:hover { text-decoration: underline; }*/
+.loot-config-list ul { padding-inline-start: 0px; color:#9C9C9C; font-size:12px; margin-top:8px; }
+.loot-config-list ul li { position: relative; }
+.loot-config-list ul li, .loot-config-list ul li a { padding-left:2px; padding-bottom:2px; color:#000;}
+
 
 .page-footer { min-height:250px; text-align: center; background-color:#000000; }
 .page-footer .footer-copyright { background-color: #000000;}
 
 @media all and (max-width: 1200px) {
   .card-raider .raider-info { padding:20px; }
-  .loot-config-list { /*max-width:67%;*/}
   .container.cinched { width: 58%; }
 }
 
@@ -159,7 +150,6 @@ p strong { font-weight:bold; }
 
   #header nav.main-nav a.global-nav-hamburger { display:inline; margin-right:0; float:right; }
 	.t2.priority-content, .t2.lottery-content, .t1.priority-content, .t1.lottery-content { margin-top:20px; } 
-  .loot-config-list { /*max-width: 67%;*/}
   .break {
   flex-basis: 100%;
   height: 0;

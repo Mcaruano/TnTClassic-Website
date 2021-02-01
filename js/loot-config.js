@@ -139,14 +139,14 @@ function showRaiders(jsonObj, sorttype) {
   var sortType = sorttype;
 
   for (var i = 0; i < tntRaiders.length; i++) {
-    var t1PrioList = document.createElement('ol');
-    var t1LottoList = document.createElement('ol');
-    var t2PrioList = document.createElement('ol');
-    var t2LottoList = document.createElement('ol');
-    var t2pt5PrioList = document.createElement('ol');
-    var t2pt5LottoList = document.createElement('ol');
-    var t3PrioList = document.createElement('ol');
-    var t3LottoList = document.createElement('ol');
+    var t1PrioList = document.createElement('ul');
+    var t1LottoList = document.createElement('ul');
+    var t2PrioList = document.createElement('ul');
+    var t2LottoList = document.createElement('ul');
+    var t2pt5PrioList = document.createElement('ul');
+    var t2pt5LottoList = document.createElement('ul');
+    var t3PrioList = document.createElement('ul');
+    var t3LottoList = document.createElement('ul');
 
     var myCharName = document.createElement('div');
     myCharName.setAttribute('class', 'raider-name');
