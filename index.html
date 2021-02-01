@@ -1,237 +1,326 @@
-<!DOCTYPE html>
-<html lang="en">
-<title>W3.CSS Template</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {font-family: "Lato", sans-serif}
-.mySlides {display: none}
-</style>
-<body>
-
-<!-- Navbar -->
-<div class="w3-top">
-  <div class="w3-bar w3-black w3-card">
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BAND</a>
-    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TOUR</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
-    <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
-      <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="#" class="w3-bar-item w3-button">Merchandise</a>
-        <a href="#" class="w3-bar-item w3-button">Extras</a>
-        <a href="#" class="w3-bar-item w3-button">Media</a>
-      </div>
-    </div>
-    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
-  </div>
-</div>
-
-<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BAND</a>
-  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TOUR</a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
-</div>
-
-<!-- Page content -->
-<div class="w3-content" style="max-width:2000px;margin-top:46px">
-
-  <!-- Automatic Slideshow Images -->
-  <div class="mySlides w3-display-container w3-center">
-    <img src="/w3images/la.jpg" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>Los Angeles</h3>
-      <p><b>We had the best time playing at Venice Beach!</b></p>   
-    </div>
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="/w3images/ny.jpg" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>New York</h3>
-      <p><b>The atmosphere in New York is lorem ipsum.</b></p>    
-    </div>
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="/w3images/chicago.jpg" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>Chicago</h3>
-      <p><b>Thank you, Chicago - A night we won't forget.</b></p>    
-    </div>
-  </div>
-
-  <!-- The Band Section -->
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
-    <h2 class="w3-wide">THE BAND</h2>
-    <p class="w3-opacity"><i>We love music</i></p>
-    <p class="w3-justify">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-      ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
-      adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <div class="w3-row w3-padding-32">
-      <div class="w3-third">
-        <p>Name</p>
-        <img src="/w3images/bandmember.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
-      </div>
-      <div class="w3-third">
-        <p>Name</p>
-        <img src="/w3images/bandmember.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
-      </div>
-      <div class="w3-third">
-        <p>Name</p>
-        <img src="/w3images/bandmember.jpg" class="w3-round" alt="Random Name" style="width:60%">
-      </div>
-    </div>
-  </div>
-
-  <!-- The Tour Section -->
-  <div class="w3-black" id="tour">
-    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
-      <h2 class="w3-wide w3-center">TOUR DATES</h2>
-      <p class="w3-opacity w3-center"><i>Remember to book your tickets!</i></p><br>
-
-      <ul class="w3-ul w3-border w3-white w3-text-grey">
-        <li class="w3-padding">September <span class="w3-tag w3-red w3-margin-left">Sold out</span></li>
-        <li class="w3-padding">October <span class="w3-tag w3-red w3-margin-left">Sold out</span></li>
-        <li class="w3-padding">November <span class="w3-badge w3-right w3-margin-right">3</span></li>
-      </ul>
-
-      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
-        <div class="w3-third w3-margin-bottom">
-          <img src="/w3images/newyork.jpg" alt="New York" style="width:100%" class="w3-hover-opacity">
-          <div class="w3-container w3-white">
-            <p><b>New York</b></p>
-            <p class="w3-opacity">Fri 27 Nov 2016</p>
-            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
-          </div>
-        </div>
-        <div class="w3-third w3-margin-bottom">
-          <img src="/w3images/paris.jpg" alt="Paris" style="width:100%" class="w3-hover-opacity">
-          <div class="w3-container w3-white">
-            <p><b>Paris</b></p>
-            <p class="w3-opacity">Sat 28 Nov 2016</p>
-            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
-          </div>
-        </div>
-        <div class="w3-third w3-margin-bottom">
-          <img src="/w3images/sanfran.jpg" alt="San Francisco" style="width:100%" class="w3-hover-opacity">
-          <div class="w3-container w3-white">
-            <p><b>San Francisco</b></p>
-            <p class="w3-opacity">Sun 29 Nov 2016</p>
-            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Ticket Modal -->
-  <div id="ticketModal" class="w3-modal">
-    <div class="w3-modal-content w3-animate-top w3-card-4">
-      <header class="w3-container w3-teal w3-center w3-padding-32"> 
-        <span onclick="document.getElementById('ticketModal').style.display='none'" 
-       class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
-        <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>Tickets</h2>
-      </header>
-      <div class="w3-container">
-        <p><label><i class="fa fa-shopping-cart"></i> Tickets, $15 per person</label></p>
-        <input class="w3-input w3-border" type="text" placeholder="How many?">
-        <p><label><i class="fa fa-user"></i> Send To</label></p>
-        <input class="w3-input w3-border" type="text" placeholder="Enter email">
-        <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">PAY <i class="fa fa-check"></i></button>
-        <button class="w3-button w3-red w3-section" onclick="document.getElementById('ticketModal').style.display='none'">Close <i class="fa fa-remove"></i></button>
-        <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p>
-      </div>
-    </div>
-  </div>
-
-  <!-- The Contact Section -->
-  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
-    <h2 class="w3-wide w3-center">CONTACT</h2>
-    <p class="w3-opacity w3-center"><i>Fan? Drop a note!</i></p>
-    <div class="w3-row w3-padding-32">
-      <div class="w3-col m6 w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker" style="width:30px"></i> Chicago, US<br>
-        <i class="fa fa-phone" style="width:30px"></i> Phone: +00 151515<br>
-        <i class="fa fa-envelope" style="width:30px"> </i> Email: mail@mail.com<br>
-      </div>
-      <div class="w3-col m6">
-        <form action="/action_page.php" target="_blank">
-          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-            <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-            </div>
-            <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<title>TnT Loot Config — There's No Tomorrow</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/materialize.css" />
+  <link rel="stylesheet" type="text/css" href="css/tnt-base.css?v=39" />
+  <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+	<script type="text/javascript" src="js/materialize.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Oxygen:300,400|Sintony:400,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src="https://wow.zamimg.com/widgets/power.js"></script>
+	<script>
+		    $(document).ready(function(){
+    $('select').formSelect();
+              $('.sidenav').sidenav();   
+  });
+	</script>
+  <style type="text/css">
+    .tnt-raider.v2 {display:none;}
+		#lastUpdated { margin-bottom:0px; }
+		.note { margin-top:0; color:#BFBFBF; }
+    /*#dropdown-input-field { margin-top:0;}*/
+  </style>
+  <!-- Template -->
+  <script id="hidden-template" type="text/x-custom-template">
+       <div class="tnt-raider v2">
+        <div class="card card-raider horizontal">
+          <div class="raider-info"></div>
+          
+          <div class="card-stacked">
+            <div class="row loot-config-lists card-content">
+            
+              <div class="col s12 m6 l3 t3 priority-content">
+                <div class="row content-wrap">
+                  <div class="col priority-dkp l12">
+                    <div class="dkp-count priority-dkp-count">
+											<div class="priority-dkp-value dkp-value t3"></div>
+                      <div class="dkp-label">T3 - PRIORITY</div>
+                    </div>
+                  </div>
+                  <div class="col loot-config-list priority-list l12">
+                    <div class="t3 prio-list">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col s12 m6 l3 t3 lottery-content">
+                <div class="row content-wrap">
+                  <div class="col lottery-dkp l12">
+                    <div class="dkp-count lottery-dkp-count">
+											<div class="lottery-dkp-value dkp-value t3"></div>
+                      <div class="dkp-label">T3 - LOTTERY</div>
+                    </div>
+                  </div>
+                  <div class="col loot-config-list lottery-list l12">
+                    <div class="t3 lott-list">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="break"></div>
+              
+              
+              <div class="col s12 m6 l3 t2pt5 priority-content">
+                <div class="row content-wrap">
+                  <div class="col priority-dkp l12">
+                    <div class="dkp-count priority-dkp-count">
+											<div class="priority-dkp-value dkp-value t2pt5"></div>
+                      <div class="dkp-label">T2.5 - PRIORITY</div>
+                    </div>
+                  </div>
+                  <div class="col loot-config-list priority-list l12">
+                    <div class="t2pt5 prio-list">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col s12 m6 l3 t2pt5 lottery-content">
+                <div class="row content-wrap">
+                  <div class="col lottery-dkp l12">
+										<!--<div class="loot-config-list-label">T2 Lottery</div>-->
+                    <div class="dkp-count lottery-dkp-count">
+											<div class="lottery-dkp-value dkp-value t2pt5"></div>
+                      <div class="dkp-label">T2.5 - LOTTERY</div>
+                    </div>
+                  </div>
+                  <div class="col loot-config-list lottery-list l12">
+                    <div class="t2pt5 lott-list">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="break"></div>
+              
+              <div class="col s12 m6 l3 t2 priority-content">
+                <div class="row content-wrap">
+                  <div class="col priority-dkp l12">
+                    <div class="dkp-count priority-dkp-count">
+											<div class="priority-dkp-value dkp-value t2"></div>
+                      <div class="dkp-label">T2 - PRIORITY</div>
+                    </div>
+                  </div>
+                  <div class="col loot-config-list priority-list l12">
+                    <div class="t2 prio-list">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col s12 m6 l3 t2 lottery-content">
+                <div class="row content-wrap">
+                  <div class="col lottery-dkp l12">
+										<!--<div class="loot-config-list-label">T2 Lottery</div>-->
+                    <div class="dkp-count lottery-dkp-count">
+											<div class="lottery-dkp-value dkp-value t2"></div>
+                      <div class="dkp-label">T2 - LOTTERY</div>
+                    </div>
+                  </div>
+                  <div class="col loot-config-list lottery-list l12">
+                    <div class="t2 lott-list">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="break"></div>
+              
+              <div class="col s12 m6 l3 t1 priority-content">
+                <div class="row content-wrap">
+                  <div class="col priority-dkp l12">
+                    <div class="dkp-count priority-dkp-count">
+                      <div class="priority-dkp-value dkp-value t1"></div>
+                      <div class="dkp-label">T1 - PRIORITY</div>
+                    </div>
+                  </div>
+                  <div class="col loot-config-list priority-list l12">
+                    <div class="t1 prio-list">
+                    </div>
+                  </div>
+                </div> 
+              </div>
+							
+              <div class="col s12 m6 l3 t1 lottery-content">
+                <div class="row content-wrap">
+                  <div class="col lottery-dkp l12">
+										<!--<div class="loot-config-list-label">T1 Lottery</div>-->
+                    <div class="dkp-count lottery-dkp-count">
+                      <div class="lottery-dkp-value dkp-value t1"></div>
+                      <div class="dkp-label">T1 - LOTTERY</div>
+                    </div>
+                  </div>
+                  <div class="col loot-config-list lottery-list 112">
+                    <div class="t1 lott-list">
+                    </div>
+                  </div>
+                </div>
+              </div>
+							
             </div>
           </div>
-          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-          <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
-        </form>
+
+        </div>
       </div>
-    </div>
-  </div>
+  </script>
   
-<!-- End Page Content -->
-</div>
-
-<!-- Image of location/map -->
-<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
-
-<!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-  <i class="fa fa-facebook-official w3-hover-opacity"></i>
-  <i class="fa fa-instagram w3-hover-opacity"></i>
-  <i class="fa fa-snapchat w3-hover-opacity"></i>
-  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-  <i class="fa fa-twitter w3-hover-opacity"></i>
-  <i class="fa fa-linkedin w3-hover-opacity"></i>
-  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-</footer>
-
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-153156619-1"></script>
 <script>
-// Automatic Slideshow - change image every 4 seconds
-var myIndex = 0;
-carousel();
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 4000);    
-}
-
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-
-// When the user clicks anywhere outside of the modal, close it
-var modal = document.getElementById('ticketModal');
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+  gtag('config', 'UA-153156619-1');
 </script>
 
+  
+</head>
+
+<body>
+  
+<div id="header">
+  <div class="global-nav container">
+    <div class="row">
+      <div class="col l5 s10">
+        <a href="index.html"><div class="logo"></div></a>
+      </div>
+      <div class="col l7 s2">
+        <nav class="main-nav">
+          <a href="#" data-target="mobile-nav" class="sidenav-trigger global-nav-hamburger"><i class="material-icons">menu</i></a>
+          <div class="right hide-on-med-and-down">
+            <a class="active" href="#">Loot Config</a>
+            <a href="dkp-system.html">DKP System Info</a>
+            <a href="faq.html">FAQ</a>
+            <a href="guild-bank.html">Guild Bank</a>
+          </div>
+        </nav>
+        
+         <ul class="sidenav" id="mobile-nav">
+           <li><a class="active" href="#">Loot Config</a></li>
+           <li><a href="dkp-system.html">DKP System Info</a></li>
+           <li><a href="faq.html">FAQ</a></li>
+           <li><a href="guild-bank.html">Guild Bank</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div><!-- /header -->
+  
+<div id="sh-loot-config" class="section section-header valign-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col l12"><h3 class="center-align">TNT Loot Configuration</h3></div>
+    </div>
+  </div>
+</div>
+	
+
+<div class="section">
+  <div class="container">
+    
+    <div class="row">
+      <div id="your-priority-list" class="col l12 m12 s12">
+        <h4>DKP + Priority & Lottery Lists</h4>
+        <p id="lastUpdated">Last Updated: </p>
+				<p class="note">(Ctrl+Shift+R to be sure you're viewing the latest data)</p>
+      </div>
+    </div>
+		
+    <div class="row">
+      <div class="col l12">
+        <div class="filter-label">Filter by class: <a class="uncheck-all" href="#uncheck">Uncheck all</a> <a class="check-all" href="#check">Check all</a></div>
+      </div>
+    </div>
+    
+    <div id="filter-by-class" class="row">
+      <form>
+        <div class="col l2">
+          <p><label>
+            <input type="checkbox" id="filter-warrior" class="filled-in filter-class-warrior" name="filter-class-warrior"  />
+            <span>Warrior</span>
+            </label></p>
+          <p>
+         <label>
+          <input type="checkbox" id="filter-rogue" class="filled-in filter-class-rogue" name="filter-class-rogue"  />
+          <span>Rogue</span>
+        </label>
+          </p>
+        </div><!-- /col -->
+        <div class="col l2">
+          <p><label>
+            <input type="checkbox" id="filter-mage" class="filled-in filter-class-mage" name="filter-class-mage"  />
+            <span>Mage</span>
+            </label></p>
+          <p>
+         <label>
+          <input type="checkbox" id="filter-warlock" class="filled-in filter-class-warlock" name="filter-class-warlock"  />
+          <span>Warlock</span>
+        </label>
+          </p>
+        </div><!-- /col -->
+        <div class="col l2">
+          <p><label>
+            <input type="checkbox" id="filter-priest" class="filled-in filter-class-priest" name="filter-class-priest"  />
+            <span>Priest</span>
+            </label></p>
+          <p>
+         <label>
+          <input type="checkbox" id="filter-paladin" class="filled-in filter-class-paladin" name="filter-class-paladin"  />
+          <span>Paladin</span>
+        </label>
+          </p>
+        </div><!-- /col -->
+        <div class="col l2">
+          <p><label>
+            <input type="checkbox" id="filter-hunter" class="filled-in filter-class-hunter" name="filter-class-hunter"  />
+            <span>Hunter</span>
+            </label></p>
+          <p>
+         <label>
+          <input type="checkbox" id="filter-druid" class="filled-in filter-class-druid" name="filter-class-druid"  />
+          <span>Druid</span>
+        </label>
+          </p>
+        </div><!-- /col -->
+      </form>
+      <div id="dropdown-input-field" class="input-field col offset-l1 l3 s12">
+				<select id="dropdown-sort" onchange="sortChanged(this.value)">
+					<option value="0" disabled>Sort By</option>
+          <option value="7" selected>T3 - Priority</option>
+					<option value="8">T3 - Lottery</option>
+          <option value="5">T2.5 - Priority</option>
+					<option value="6">T2.5 - Lottery</option>
+					<option value="1">T2 - Priority</option>
+					<option value="2">T2 - Lottery</option>
+          <option value="3">T1 - Priority</option>
+          <option value="4">T1 - Lottery</option>
+				</select>
+        <label>Sort by</label>
+			</div>
+    </div>
+    
+    <div class="row">
+      <div id="raider-list" class="col l12 m12 s12">
+      </div>
+    </div>
+        
+				
+  </div><!-- /container -->
+</div><!-- /section -->
+
+	
+<footer class="page-footer">
+	<div class="footer-copyright">
+		<div class="container">
+		© 2020 There's No Tomorrow.
+		</div>
+	</div>
+</footer>
+  <script type="text/javascript" src="js/loot-config.js?v=105"></script>
 </body>
 </html>

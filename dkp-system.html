@@ -1,0 +1,214 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>TnT DKP System — There's No Tomorrow</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/materialize.css" />
+<link rel="stylesheet" type="text/css" href="css/tnt-base.css?v=16" />
+<script
+	src="https://code.jquery.com/jquery-3.4.1.min.js"
+	integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/materialize.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Oxygen:300,400|Sintony:400,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script>
+		    $(document).ready(function(){
+          $('.sidenav').sidenav();   
+          var elem = document.querySelector('.collapsible.expandable');
+var instance = M.Collapsible.init(elem, {
+  accordion: false
+});
+        
+  });
+	</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-153156619-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-153156619-1');
+</script>
+</head>
+
+<body>
+<div id="header">
+  <div class="global-nav container">
+    <div class="row">
+      <div class="col l5 s10"> <a href="index.html">
+        <div class="logo"></div>
+        </a> </div>
+      <div class="col l7 s2">
+        <nav class="main-nav"> <a href="#" data-target="mobile-nav" class="sidenav-trigger global-nav-hamburger"><i class="material-icons">menu</i></a>
+          <div class="right hide-on-med-and-down"> <a href="index.html">Loot Config</a> <a class="active" href="dkp-system.html">DKP System Info</a> <a href="faq.html">FAQ</a> <a href="guild-bank.html">Guild Bank</a> </div>
+        </nav>
+        <ul class="sidenav" id="mobile-nav">
+          <li><a href="index.html">Loot Config</a></li>
+          <li><a class="active" href="dkp-system.html">DKP System Info</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="guild-bank.html">Guild Bank</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /header -->
+
+<div id="sh-loot-config" class="section section-header valign-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col l12">
+        <h3 class="center-align">TNT Loot Configuration</h3>
+        <h5 class="center-align">A three-tiered loot distribution system based on DKP</h5>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <div class="container cinched">
+         <ul class="collapsible expandable">
+    <li class="active">
+      <div class="collapsible-header"><i class="material-icons">add</i>What is it?
+        </div>
+            <div class="collapsible-body">
+        <p>“TnT DKP” is our own take on DKP. It consists of two DKP phases: a “Priority” phase and a “Lottery” phase, followed by an Open Roll phase. Prior to the start of any given raid night, players designate which specific pieces of gear they desire from the Priority phase and Lottery phase by posting their “LootConfigs” in our DKP discord channel.</p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">add</i>Is there only one DKP table for all content?
+        </div>
+            <div class="collapsible-body">
+        <p>No. We track separate DKP for each content tier. Presently, there are three content tiers: T1, T2, and T2.5. T1 DKP is used to determine winners and spend for loot in Molten Core and Onyxia, T2 DKP is used for the same in Blackwing Lair, and T2.5 for AQ40. Naxx will be T3 DKP.</p>
+      </div>
+  </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">add</i>How do I get DKP?</div>
+            <div class="collapsible-body">
+      <p>DKP is awarded as follows:</p>
+      <ul>
+        <li>590 T1, T2, & T2.5 DKP for all of the bosses in Molten Core</li>
+        <li>590 T2 & T2.5 DKP for all of the bosses in BWL</li>
+        <li>585 T2.5 DKP for all of the bosses in AQ40</li>
+        <li>Onyxia does not award DKP, but still leverages T1 DKP to resolve her loot. In this way, Onyxia is an “optional” raid in that our raiders can freely skip this raid if they don’t need anything.</li>
+      </ul>
+      <p><strong>Within each content tier DKP table, we track two separate DKP values for each player:</strong> one for “Priority” DKP and one for “Lottery” DKP. When a player is awarded DKP for a given Content Tier (T1, T2, T2.5), they are awarded <em>both</em> Priority and Lottery DKP for that Content Tier. For instance, if a player is present for Nefarian (awards 75 T2 DKP), they will be awarded 75 T2 Priority DKP, and 75 T2 Lottery DKP.</p>
+      <p>At the end of each raid week, each player can earn 590 T1 DKP (both Priority and Lottery), 1180 T2 DKP (both Priority and Lottery), and 1765 T2.5 DKP (both Priority and Lottery). These values might seem very bizarre, but they are tuned such that <strong>after the weekly 15% decay</strong>, each player comes out with slightly more than ½ the cost of an item for <em>each</em> raid tier. The weekly decay and cost of items are explained in more detail in later sections.</p>
+    </div>
+  </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">add</i>Why does MC award T1, T2, and T2.5 DKP?</div>
+            <div class="collapsible-body">
+      <p>This is actually quite simple - MC awards T1, T2, and T2.5 DKP to incentivize players to continue to raid T1 content for their fellow raiders who still need gear. BWL awards both T2 and T2.5 DKP for the same reason.</p>
+    </div>
+  </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">add</i>How much DKP do items cost?</div>
+            <div class="collapsible-body">
+      <p>All items in T1 content cost 1000 T1 DKP, with the only exception being the Ancient Petrified Leaf and the Mature Black Dragon Sinew, which cost 500 each (totaling 1000). All items in T2 content cost 2000 T2 DKP, and all items in T2.5 content cost 3000 T2.5 DKP. The cost of items and weekly yield from doing all content are tuned such that it takes roughly two raid weeks before a player can afford their first piece of loot at Priority.</p>
+    </div>
+  </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">add</i>What is the “Priority” phase?</div>
+            <div class="collapsible-body">
+      <p>When an item drops, it first goes through the Priority phase. Priority DKP operates exactly the same as classic DKP. The winner of this item is simply the player with the highest Priority DKP who has this item in their Priority Config. When the winner is determined, the item is looted to that player and the appropriate amount of Priority DKP is deducted immediately.</p>
+    </div>
+  </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">add</i>What is the “Lottery” phase?</div>
+            <div class="collapsible-body">
+      <p>The Lottery phase is completely unique to our loot system. When an item is being distributed, if no players had that item in their Priority Config, a check is then done to see who has this item in their Lottery Config. For all players who have this item in their Lottery Config, a “Lottery” is initiated as such:</p>
+      <ul>
+        <li>Each player receives a number of “tickets” equal to their Lottery DKP (with a minimum of 1)</li>
+        <li>Each player has a “range” assigned to them automatically by the AddOn</li>
+        <li>The AddOn then executes a random roll from 1 to the total number of tickets in the Lottery</li>
+        <li>The result of the roll is then checked against the designated “ranges” for each player to determine who wins</li>
+        <li>The actual Lottery logic is executed entirely by the AddOn, including the roll. When the winner is determined, the item is looted to the winner and the appropriate amount of Lottery DKP is deducted immediately.</li>
+      </ul>
+      <p><img src="images/loot-example.jpg"></p>
+    </div>
+  </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">add</i>What items can I place in my Loot Config?</div>
+            <div class="collapsible-body">
+      <p>The Priority phase is intended to be an avenue to gear our raiders with main spec loot. We follow a basic intuition here regarding a sense of “main spec”. As such, it is left to the Officers to decide what is and is not acceptable for their players to place on their Priority list.</p>
+      <p><span style="text-decoration:underline">One caveat to this restriction on Priority loot is 2-Handers</span>. 2-Handers are not BiS PvE for anyone in our raid. As such, we allow any of our players to put 2-Handers on their <strong>Priority</strong> LootConfigs if they so choose. Priority DKP is a very precious currency, so if the player wants a 2-Hander that badly - whether it’s for their PvP ranking or otherwise - that’s their choice, and they are fully empowered to do so.</p>
+      <p>The Lottery phase is unrestricted. It is how players can get items for PvP, or items for their off-specs, or just items for doing random things like dungeon farming or power leveling. The thinking here is relatively straightforward - no one can be upset about losing something for their main spec at Lottery to a player’s off-spec. If the item was that important to them, they should have put it on their Priority LootConfig.</p>
+    </div>
+  </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">add</i>What happens if no one has the item on either Priority or Lottery?</div>
+            <div class="collapsible-body">
+      <p>If no one has a particular item on either Priority or Lottery, then it simply goes to Open Roll, where our only requirement is “you must plan on using it at some point”. By “using it” we don’t necessarily mean in raid: you could intend to use the item to farm 5man content, or use it when your soloing in the world, or use it when PvPing – we don’t care, as long as you’re not going to DE or vendor it. This is the avenue by which players may obtain offspec loot.</p>
+    </div>
+  </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">add</i>Can DKP go negative?</div>
+            <div class="collapsible-body">
+      <p>Yes, both Priority DPK and Lottery DKP can go negative, but going negative in each has different meaning.</p>
+      <p>In Lottery, going negative means that you will be reduced to a single ticket in the lottery. This does not mean that your Lottery DKP has a floor of 1, however. Your Lottery DKP can and will continue to go deeper and deeper into the negatives if you continue to win items with your 1 Lottery ticket. All this means is that it’ll take you longer to crawl out of your hole to be able to have more than 1 ticket in future lotteries.</p>
+      <p>In Priority, we actually enforce a rule whereby players cannot win items at Priority if they don’t have enough DKP to afford the cost up-front. However, for any such players who can’t afford the item but have it in their Priority config, when that item drops we go ahead and add the item to their Lottery Configs automatically (the AddOn handles this in real-time). This way, if only one player had this item on their Priority Config and they couldn’t afford it, if and when it moves onto the Lottery phase the player still has a shot at it. This change to the player’s Lottery Config is temporary, and will only be in affect for the current raid night.</p>
+      <p>Given the above rule, it shouldn’t be possible for a player to end up in the negatives in Priority DKP. However, there are certain edge cases that could cause it, such as if the player is a designated recipient of a legendary – they are going to receive that item regardless and be charged its cost regardless.</p>
+    </div>
+  </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">add</i>In what order are the items from a boss distributed?</div>
+            <div class="collapsible-body">
+      <p>Items are always distributed in ItemID order, ascending. The order in which items are distributed matters can drastically change the outcome of who gets what. If this isn’t obvious to you, consider the scenario where you and another Warrior have Quick Strike Ring (ItemID 18821) and Obsidian Edged Blade (ItemID 18822) in your Priority Configs. You currently have 100 more T1 Priority DKP than the other Warrior. We kill Magmadar and both items drop. Given our ItemID ascending distribution rule, we would distribute the ring first, resulting in you winning the ring and having 1000 T1 Priority DKP deducted. Then, we would distribute the Obsidian Edged Blade, resulting in the other Warrior getting the sword as he now has higher T1 Priority DKP than you. If, however, we had distributed the Obsidian Edged Blade first, the results would have been flip-flopped, and you would have received the sword and the other Warrior the ring. If the officer running the Master Looting for that raid night was particularly fond of you and knew that you really wanted the sword, maybe he/she would have opted to distribute the sword first just to ensure you got it. It’s important to us that we don’t introduce any bias like this into our loot system, so we choose to enforce consistency via ItemID.</p>
+    </div>
+  </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">add</i>Can I place Eye of Sulfuras in my Loot Config?</div>
+            <div class="collapsible-body">
+      <p>No. In our guild, legendary items will always be decided via loot council. However, designated recipients will still be charged the standard cost of an item: 1000 T1 Priority DKP for Eye of Sulfuras, 500 T1 Priority DKP for each of the two bindings, and we will likely do something similar for Atiesh.</p>
+    </div>
+  </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">add</i>Can I update my Loot Config during the raid?</div>
+            <div class="collapsible-body">
+      <p>No, with one exception. Loot Config modifications close at 5:00PM PST on raid nights. Any changes that come in after 5:00PM are disregarded. There is one exception to this rule, however: if you have two items in your Loot Config for the same slot, where winning one might make you no longer desire the other, we allow you to remove the upcoming item(s) from your LootConfig during the raid. Here’s an example illustrating this with Mana Igniting Cord and Sash of Whispered Secrets for Shadow Priests/Warlocks.</p>
+      <p>Let’s say you are a Warlock and you have both Mana Igniting Cord and Sash of Whispered Secrets in your Priority Config. Let’s also say that you have 3000 T1 Priority DKP and the next highest Warlock/SPriest only has 1500 T1 Priority DKP. We kill Baron Geddon, Mana Igniting Cord drops, and you win it and get charged 1000 T1 Priority DKP. The raid moves along and kills Domo. Domo now drops Sash of Whispered Secrets. Well, you still have Sash of Whispered Secrets on your Priority Config and you still have more T1 Priority DKP than the other players with it in their Priority Config, so the AddOn determines that you should win it. Ideally, you should be able to inform the Officers so that you could have removed the Sash of Whispered Secrets from your Priority list upon receiving the Mana Igniting Cord to prevent gear going to waste.</p>
+      <p>To avoid this situation, the Master Looter who is running our TnTDKP AddOn can update players’ Loot Configs during the raid for this one specific circumstance. To do this, a player would need to whisper an Officer (any officer will do) immediately after receiving the initial piece of gear. In the above example, this would mean that once the Warlock received the Mana Igniting Cord, he/she would have to immediately reach out to an Officer to request removing Sash of Whispered Secrets from his/her Priority Config.</p>
+    </div>
+  </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">add</i>What is the distinction between “Core” and “Reserve” raiders?</div>
+            <div class="collapsible-body">
+      <p>There are two distinctions between Core and Reserve raiders. The first is straightforward: being a Core Raider means that you have a guaranteed raid invite.</p>
+      <p>The second distinction is when Priority loot is being distributed. Reserve raiders cannot take items via Priority DKP over Core raiders who have those items also in their Priority Configs, regardless of whether or not the Reserve raider has higher Priority DKP than the Core raider. This only affects Priority items. Core and Reserve raiders Lottery against each other just the same, and Reserve raiders can still win items at Priority if there are no Core raiders with this item in their Priority Configs.</p>
+    </div>
+  </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">add</i>Is there a DKP decay?</div>
+            <div class="collapsible-body">
+      <p>DKP “Decay” is a tool used by guilds to control the inflation of DKP. This is useful for making sure that newcomers can come in and have a reasonable shot at loot. As mentioned earlier, we track separate DKP for each content tier, which is presently T1, T2, and T2.5. Also as mentioned earlier, we track two types of DKP within each of those two content tiers: Priority and Lottery. This means that we effectively have 6 DKP tables: T1 Priority, T1 Lottery, T2 Priority, T2 Lottery, T2.5 Priority, and T2.5 Lottery. We perform a weekly 15% decay across all four tables, performed on Monday night. Negative values do not decay.</p>
+    </div>
+  </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">add</i>Does DKP start at 0 for new content tiers?</div>
+            <div class="collapsible-body">
+      <p>No. We take the values of the previous tier and perform a one-time squish to instantiate the DKP standings of the new raid tier. A “one-time squish” is basically just a way more drastic decay, and is performed as follows:</p>
+      <ul>
+        <li>Scale the player with the Highest Priority DKP down to 125% the cost of an item in the next Content Tier. This determines the Priority DKP Scaling Factor.</li>
+        <li>Use the Priority DKP Scaling Factor above to scale the Priority DKP of all players to determine what their Priority DKP at the start of the new Content Tier will be.</li>
+        <li>Scale the player with the highest Lottery DKP down to 125% the cost of an item in the next Content Tier. This determines the Lottery DKP Scaling Factor.</li>
+        <li>Use the Lottery DKP Scaling Factor above to scale the Lottery DKP of all players to determine what their Lottery DKP at the start of the new Content Tier will be.</li>
+      </ul>
+        <p>The result will be the DKP standings going into the new Content Tier. Note that after all of the scaling math has been performed, <span style="text-decoration:underline">the DKP standings of the Current Content tier remain unchanged</span>. The Current Content tier is only reduced via the standard Weekly 15% Decay.</p>
+    </div>
+    </li>
+    </ul>
+</div>
+<!-- /container -->
+</div>
+<!-- /section -->
+
+<footer class="page-footer">
+  <div class="footer-copyright">
+    <div class="container"> © 2020 There's No Tomorrow. </div>
+  </div>
+</footer>
+</body>
+</html>
