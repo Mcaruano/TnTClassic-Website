@@ -139,14 +139,14 @@ function showRaiders(jsonObj, sorttype) {
   var sortType = sorttype;
 
   for (var i = 0; i < tntRaiders.length; i++) {
-    var myList2 = document.createElement('ol');
-    var myList3 = document.createElement('ol');
-    var myList4 = document.createElement('ol');
-    var myList5 = document.createElement('ol');
-    var myList6 = document.createElement('ol');
-    var myList7 = document.createElement('ol');
-    var myList8 = document.createElement('ol');
-    var myList9 = document.createElement('ol');
+    var t1PrioList = document.createElement('ol');
+    var t1LottoList = document.createElement('ol');
+    var t2PrioList = document.createElement('ol');
+    var t2LottoList = document.createElement('ol');
+    var t2pt5PrioList = document.createElement('ol');
+    var t2pt5LottoList = document.createElement('ol');
+    var t3PrioList = document.createElement('ol');
+    var t3LottoList = document.createElement('ol');
 
     var myCharName = document.createElement('div');
     myCharName.setAttribute('class', 'raider-name');
@@ -168,128 +168,128 @@ function showRaiders(jsonObj, sorttype) {
     myCharRank.innerHTML = tntRaiders[i].Rank;
 
     /* T1 */
-    var prio = tntRaiders[i].T1_PriorityConfig;
-    for (var j = 0; j < prio.length; j++) {
-      var listItem2 = document.createElement('li');
-      listItem2.innerHTML = '<a href="https://classic.wowhead.com/item=' + prio[j].ItemID + '" target="_blank" rel="noopener">' + prio[j].ItemName + '</a>';
-      myList2.appendChild(listItem2);
-      if (prio[j].Quantity > 1) {
-        listItem2.innerHTML += ' x' + prio[j].Quantity;
+    var t1PrioPlayerLootConfig = tntRaiders[i].T1_PriorityConfig;
+    for (var j = 0; j < t1PrioPlayerLootConfig.length; j++) {
+      var t1PrioListItem = document.createElement('li');
+      t1PrioListItem.innerHTML = '<a href="https://classic.wowhead.com/item=' + t1PrioPlayerLootConfig[j].ItemID + '" target="_blank" rel="noopener">' + t1PrioPlayerLootConfig[j].ItemName + '</a>';
+      t1PrioList.appendChild(t1PrioListItem);
+      if (t1PrioPlayerLootConfig[j].Quantity > 1) {
+        t1PrioListItem.innerHTML += ' x' + t1PrioPlayerLootConfig[j].Quantity;
       }
     }
-    if (prio.length == 0) {
-      var listItem2 = document.createElement('p');
-      listItem2.innerHTML = "<a href='https://classic.wowhead.com/npc=11956' target='_blank' rel='noopener'>ʕ•ᴥ•ʔ</a>";
-      myList2.appendChild(listItem2);
+    if (t1PrioPlayerLootConfig.length == 0) {
+      var t1PrioListItem = document.createElement('p');
+      t1PrioListItem.innerHTML = "<a href='https://classic.wowhead.com/npc=11956' target='_blank' rel='noopener'>ʕ•ᴥ•ʔ</a>";
+      t1PrioList.appendChild(t1PrioListItem);
     }
 
-    var lott = tntRaiders[i].T1_LotteryConfig;
-    for (var j = 0; j < lott.length; j++) {
-      var listItem3 = document.createElement('li');
-      listItem3.innerHTML = '<a href="https://classic.wowhead.com/item=' + lott[j].ItemID + '" target="_blank" rel="noopener">' + lott[j].ItemName + '</a>';
-      if (lott[j].Quantity > 1) {
-        listItem3.innerHTML += ' x' + lott[j].Quantity;
+    var t1LottoPlayerLootConfig = tntRaiders[i].T1_LotteryConfig;
+    for (var j = 0; j < t1LottoPlayerLootConfig.length; j++) {
+      var t1LottoListItem = document.createElement('li');
+      t1LottoListItem.innerHTML = '<a href="https://classic.wowhead.com/item=' + t1LottoPlayerLootConfig[j].ItemID + '" target="_blank" rel="noopener">' + t1LottoPlayerLootConfig[j].ItemName + '</a>';
+      if (t1LottoPlayerLootConfig[j].Quantity > 1) {
+        t1LottoListItem.innerHTML += ' x' + t1LottoPlayerLootConfig[j].Quantity;
       }
-      myList3.appendChild(listItem3);
+      t1LottoList.appendChild(t1LottoListItem);
     }
-    if (lott.length == 0) {
-      var listItem3 = document.createElement('p');
-      listItem3.innerHTML = "<a href='https://classic.wowhead.com/npc=11325' target='_blank' rel='noopener'>ʕ•ᴥ•ʔ</a>";
-      myList3.appendChild(listItem3);
+    if (t1LottoPlayerLootConfig.length == 0) {
+      var t1LottoListItem = document.createElement('p');
+      t1LottoListItem.innerHTML = "<a href='https://classic.wowhead.com/npc=11325' target='_blank' rel='noopener'>ʕ•ᴥ•ʔ</a>";
+      t1LottoList.appendChild(t1LottoListItem);
     }
 
     /* T2 */
-    var t2prio = tntRaiders[i].T2_PriorityConfig;
-    for (var j = 0; j < t2prio.length; j++) {
-      var listItem4 = document.createElement('li');
-      listItem4.innerHTML = '<a href="https://classic.wowhead.com/item=' + t2prio[j].ItemID + '" target="_blank" rel="noopener">' + t2prio[j].ItemName + '</a>';
-      if (t2prio[j].Quantity > 1) {
-        listItem4.innerHTML += ' x' + t2prio[j].Quantity;
+    var t2PrioPlayerLootConfig = tntRaiders[i].T2_PriorityConfig;
+    for (var j = 0; j < t2PrioPlayerLootConfig.length; j++) {
+      var t2PrioListItem = document.createElement('li');
+      t2PrioListItem.innerHTML = '<a href="https://classic.wowhead.com/item=' + t2PrioPlayerLootConfig[j].ItemID + '" target="_blank" rel="noopener">' + t2PrioPlayerLootConfig[j].ItemName + '</a>';
+      if (t2PrioPlayerLootConfig[j].Quantity > 1) {
+        t2PrioListItem.innerHTML += ' x' + t2PrioPlayerLootConfig[j].Quantity;
       }
-      myList4.appendChild(listItem4);
+      t2PrioList.appendChild(t2PrioListItem);
     }
-    if (t2prio.length == 0) {
-      var listItem4 = document.createElement('p');
-      listItem4.innerHTML = "<a href='https://classic.wowhead.com/item=22736' target='_blank' rel='noopener'>ʕ•ᴥ•ʔ</a>";
-      myList4.appendChild(listItem4);
+    if (t2PrioPlayerLootConfig.length == 0) {
+      var t2PrioListItem = document.createElement('p');
+      t2PrioListItem.innerHTML = "<a href='https://classic.wowhead.com/item=22736' target='_blank' rel='noopener'>ʕ•ᴥ•ʔ</a>";
+      t2PrioList.appendChild(t2PrioListItem);
     }
 
-    var t2lott = tntRaiders[i].T2_LotteryConfig;
-    for (var j = 0; j < t2lott.length; j++) {
-      var listItem5 = document.createElement('li');
-      listItem5.innerHTML = '<a href="https://classic.wowhead.com/item=' + t2lott[j].ItemID + '" target="_blank" rel="noopener">' + t2lott[j].ItemName + '</a>';
-      if (t2lott[j].Quantity > 1) {
-        listItem5.innerHTML += ' x' + t2lott[j].Quantity;
+    var t2LottoPlayerLootConfig = tntRaiders[i].T2_LotteryConfig;
+    for (var j = 0; j < t2LottoPlayerLootConfig.length; j++) {
+      var t2LottoListItem = document.createElement('li');
+      t2LottoListItem.innerHTML = '<a href="https://classic.wowhead.com/item=' + t2LottoPlayerLootConfig[j].ItemID + '" target="_blank" rel="noopener">' + t2LottoPlayerLootConfig[j].ItemName + '</a>';
+      if (t2LottoPlayerLootConfig[j].Quantity > 1) {
+        t2LottoListItem.innerHTML += ' x' + t2LottoPlayerLootConfig[j].Quantity;
       }
-      myList5.appendChild(listItem5);
+      t2LottoList.appendChild(t2LottoListItem);
     }
-    if (t2lott.length == 0) {
-      var listItem5 = document.createElement('p');
-      listItem5.innerHTML = "<a href='https://classic.wowhead.com/item=3173' target='_blank' rel='noopener'>ʕ•ᴥ•ʔ</a>";
-      myList5.appendChild(listItem5);
+    if (t2LottoPlayerLootConfig.length == 0) {
+      var t2LottoListItem = document.createElement('p');
+      t2LottoListItem.innerHTML = "<a href='https://classic.wowhead.com/item=3173' target='_blank' rel='noopener'>ʕ•ᴥ•ʔ</a>";
+      t2LottoList.appendChild(t2LottoListItem);
     }
 
     /* T2.5 */
-    var t2pt5prio = tntRaiders[i].T2PT5_PriorityConfig;
-    for (var j = 0; j < t2pt5prio.length; j++) {
-      var listItem6 = document.createElement('li');
-      listItem6.innerHTML = '<a href="https://classic.wowhead.com/item=' + t2pt5prio[j].ItemID + '" target="_blank" rel="noopener">' + t2pt5prio[j].ItemName + '</a>';
-      if (t2pt5prio[j].Quantity > 1) {
-        listItem6.innerHTML += ' x' + t2pt5prio[j].Quantity;
+    var t2pt5PrioPlayerLootConfig = tntRaiders[i].T2PT5_PriorityConfig;
+    for (var j = 0; j < t2pt5PrioPlayerLootConfig.length; j++) {
+      var t2pt5PrioListItem = document.createElement('li');
+      t2pt5PrioListItem.innerHTML = '<a href="https://classic.wowhead.com/item=' + t2pt5PrioPlayerLootConfig[j].ItemID + '" target="_blank" rel="noopener">' + t2pt5PrioPlayerLootConfig[j].ItemName + '</a>';
+      if (t2pt5PrioPlayerLootConfig[j].Quantity > 1) {
+        t2pt5PrioListItem.innerHTML += ' x' + t2pt5PrioPlayerLootConfig[j].Quantity;
       }
-      myList6.appendChild(listItem6);
+      t2pt5PrioList.appendChild(t2pt5PrioListItem);
     }
-    if (t2pt5prio.length == 0) {
-      var listItem6 = document.createElement('p');
-      listItem6.innerHTML = "<a href='https://classic.wowhead.com/item=22781' target='_blank' rel='noopener'>ʕ•ᴥ•ʔ</a>";
-      myList6.appendChild(listItem6);
+    if (t2pt5PrioPlayerLootConfig.length == 0) {
+      var t2pt5PrioListItem = document.createElement('p');
+      t2pt5PrioListItem.innerHTML = "<a href='https://classic.wowhead.com/item=22781' target='_blank' rel='noopener'>ʕ•ᴥ•ʔ</a>";
+      t2pt5PrioList.appendChild(t2pt5PrioListItem);
     }
 
-    var t2pt5lott = tntRaiders[i].T2PT5_LotteryConfig;
-    for (var j = 0; j < t2pt5lott.length; j++) {
-      var listItem7 = document.createElement('li');
-      listItem7.innerHTML = '<a href="https://classic.wowhead.com/item=' + t2pt5lott[j].ItemID + '" target="_blank" rel="noopener">' + t2pt5lott[j].ItemName + '</a>';
-      if (t2pt5lott[j].Quantity > 1) {
-        listItem7.innerHTML += ' x' + t2pt5lott[j].Quantity;
+    var t2pt5LottoPlayerLootConfig = tntRaiders[i].T2PT5_LotteryConfig;
+    for (var j = 0; j < t2pt5LottoPlayerLootConfig.length; j++) {
+      var t2pt5LottoListItem = document.createElement('li');
+      t2pt5LottoListItem.innerHTML = '<a href="https://classic.wowhead.com/item=' + t2pt5LottoPlayerLootConfig[j].ItemID + '" target="_blank" rel="noopener">' + t2pt5LottoPlayerLootConfig[j].ItemName + '</a>';
+      if (t2pt5LottoPlayerLootConfig[j].Quantity > 1) {
+        t2pt5LottoListItem.innerHTML += ' x' + t2pt5LottoPlayerLootConfig[j].Quantity;
       }
-      myList7.appendChild(listItem7);
+      t2pt5LottoList.appendChild(t2pt5LottoListItem);
     }
-    if (t2pt5lott.length == 0) {
-      var listItem7 = document.createElement('p');
-      listItem7.innerHTML = "<a href='https://classic.wowhead.com/item=6185' target='_blank' rel='noopener'>ʕ•ᴥ•ʔ</a>";
-      myList7.appendChild(listItem7);
+    if (t2pt5LottoPlayerLootConfig.length == 0) {
+      var t2pt5LottoListItem = document.createElement('p');
+      t2pt5LottoListItem.innerHTML = "<a href='https://classic.wowhead.com/item=6185' target='_blank' rel='noopener'>ʕ•ᴥ•ʔ</a>";
+      t2pt5LottoList.appendChild(t2pt5LottoListItem);
     }
 
 
     /* T3 */
-    var t3prio = tntRaiders[i].T3_PriorityConfig;
-    for (var j = 0; j < t3prio.length; j++) {
-      var listItem8 = document.createElement('li');
-      listItem8.innerHTML = '<a href="https://classic.wowhead.com/item=' + t3prio[j].ItemID + '" target="_blank" rel="noopener">' + t3prio[j].ItemName + '</a>';
-      if (t3prio[j].Quantity > 1) {
-        listItem8.innerHTML += ' x' + t3prio[j].Quantity;
+    var t3PrioPlayerLootConfig = tntRaiders[i].T3_PriorityConfig;
+    for (var j = 0; j < t3PrioPlayerLootConfig.length; j++) {
+      var t3PrioListItem = document.createElement('li');
+      t3PrioListItem.innerHTML = '<a href="https://classic.wowhead.com/item=' + t3PrioPlayerLootConfig[j].ItemID + '" target="_blank" rel="noopener">' + t3PrioPlayerLootConfig[j].ItemName + '</a>';
+      if (t3PrioPlayerLootConfig[j].Quantity > 1) {
+        t3PrioListItem.innerHTML += ' x' + t3PrioPlayerLootConfig[j].Quantity;
       }
-      myList8.appendChild(listItem8);
+      t3PrioList.appendChild(t3PrioListItem);
     }
-    if (t3prio.length == 0) {
-      var listItem8 = document.createElement('p');
-      listItem8.innerHTML = "<a href='https://classic.wowhead.com/item=22781' target='_blank' rel='noopener'>ʕ•ᴥ•ʔ</a>";
-      myList8.appendChild(listItem8);
+    if (t3PrioPlayerLootConfig.length == 0) {
+      var t3PrioListItem = document.createElement('p');
+      t3PrioListItem.innerHTML = "<a href='https://classic.wowhead.com/item=22781' target='_blank' rel='noopener'>ʕ•ᴥ•ʔ</a>";
+      t3PrioList.appendChild(t3PrioListItem);
     }
 
-    var t3lott = tntRaiders[i].T3_LotteryConfig;
-    for (var j = 0; j < t3lott.length; j++) {
-      var listItem9 = document.createElement('li');
-      listItem9.innerHTML = '<a href="https://classic.wowhead.com/item=' + t3lott[j].ItemID + '" target="_blank" rel="noopener">' + t3lott[j].ItemName + '</a>';
-      if (t3lott[j].Quantity > 1) {
-        listItem9.innerHTML += ' x' + t3lott[j].Quantity;
+    var t3LottoPlayerLootConfig = tntRaiders[i].T3_LotteryConfig;
+    for (var j = 0; j < t3LottoPlayerLootConfig.length; j++) {
+      var t3LottoListItem = document.createElement('li');
+      t3LottoListItem.innerHTML = '<a href="https://classic.wowhead.com/item=' + t3LottoPlayerLootConfig[j].ItemID + '" target="_blank" rel="noopener">' + t3LottoPlayerLootConfig[j].ItemName + '</a>';
+      if (t3LottoPlayerLootConfig[j].Quantity > 1) {
+        t3LottoListItem.innerHTML += ' x' + t3LottoPlayerLootConfig[j].Quantity;
       }
-      myList9.appendChild(listItem9);
+      t3LottoList.appendChild(t3LottoListItem);
     }
-    if (t3lott.length == 0) {
-      var listItem9 = document.createElement('p');
-      listItem9.innerHTML = "<a href='https://classic.wowhead.com/item=6185' target='_blank' rel='noopener'>ʕ•ᴥ•ʔ</a>";
-      myList9.appendChild(listItem9);
+    if (t3LottoPlayerLootConfig.length == 0) {
+      var t3LottoListItem = document.createElement('p');
+      t3LottoListItem.innerHTML = "<a href='https://classic.wowhead.com/item=6185' target='_blank' rel='noopener'>ʕ•ᴥ•ʔ</a>";
+      t3LottoList.appendChild(t3LottoListItem);
     }
 
     //template
@@ -306,14 +306,14 @@ function showRaiders(jsonObj, sorttype) {
     $(item).find('.lottery-dkp-value.t2pt5').html(tntRaiders[i].T2PT5_LotteryDKP);
     $(item).find('.priority-dkp-value.t3').html(tntRaiders[i].T3_PriorityDKP);
     $(item).find('.lottery-dkp-value.t3').html(tntRaiders[i].T3_LotteryDKP);
-    $(item).find('.t1.prio-list').html(myList2);
-    $(item).find('.t1.lott-list').html(myList3);
-    $(item).find('.t2.prio-list').html(myList4);
-    $(item).find('.t2.lott-list').html(myList5);
-    $(item).find('.t2pt5.prio-list').html(myList6);
-    $(item).find('.t2pt5.lott-list').html(myList7);
-    $(item).find('.t3.prio-list').html(myList8);
-    $(item).find('.t3.lott-list').html(myList9);
+    $(item).find('.t1.prio-list').html(t1PrioList);
+    $(item).find('.t1.lott-list').html(t1LottoList);
+    $(item).find('.t2.prio-list').html(t2PrioList);
+    $(item).find('.t2.lott-list').html(t2LottoList);
+    $(item).find('.t2pt5.prio-list').html(t2pt5PrioList);
+    $(item).find('.t2pt5.lott-list').html(t2pt5LottoList);
+    $(item).find('.t3.prio-list').html(t3PrioList);
+    $(item).find('.t3.lott-list').html(t3LottoList);
     $(item).find('.card-raider').addClass(sortType);
     $(item).find('.tnt-raider').addClass(tntRaiders[i].class);
     $(item).find('.card-raider').addClass(tntRaiders[i].class);
