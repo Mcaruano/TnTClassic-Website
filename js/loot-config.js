@@ -4,111 +4,111 @@
 var section = document.querySelector('section');
 
 /* Load T3 Prio Descending */
-var requestURL7 = 'https://tntclassic-json.s3-us-west-1.amazonaws.com/LootConfig_T3Priority_Desc.json';
-var request7 = new XMLHttpRequest();
-request7.open('GET', requestURL7);
-request7.responseType = 'json';
-request7.send();
+var t3PrioDescUrl = 'https://tntclassic-json.s3-us-west-1.amazonaws.com/LootConfig_T3Priority_Desc.json';
+var t3PrioDescRequest = new XMLHttpRequest();
+t3PrioDescRequest.open('GET', t3PrioDescUrl);
+t3PrioDescRequest.responseType = 'json';
+t3PrioDescRequest.send();
 
-request7.onload = function () {
-  var raiders = request7.response;
-  populateLastCheckedTimestamp(raiders);
-  showRaiders(raiders, "t3-prio-desc");
+t3PrioDescRequest.onload = function () {
+  var lootConfigJson = t3PrioDescRequest.response;
+  populateLastCheckedTimestamp(lootConfigJson);
+  showRaiders(lootConfigJson, "t3-prio-desc");
   filterByClass("t3-prio-desc");
 }
 
 /* Load T3 Lotto Descending */
-var requestURL8 = 'https://tntclassic-json.s3-us-west-1.amazonaws.com/LootConfig_T3Lottery_Desc.json';
-var request8 = new XMLHttpRequest();
-request8.open('GET', requestURL8);
-request8.responseType = 'json';
-request8.send();
-request8.onload = function () {
-  var raiders = request8.response;
-  populateLastCheckedTimestamp(raiders);
-  showRaiders(raiders, "t3-lotto-desc");
+var t3LottoDescUrl = 'https://tntclassic-json.s3-us-west-1.amazonaws.com/LootConfig_T3Lottery_Desc.json';
+var t3LottoDescRequest = new XMLHttpRequest();
+t3LottoDescRequest.open('GET', t3LottoDescUrl);
+t3LottoDescRequest.responseType = 'json';
+t3LottoDescRequest.send();
+t3LottoDescRequest.onload = function () {
+  var lootConfigJson = t3LottoDescRequest.response;
+  populateLastCheckedTimestamp(lootConfigJson);
+  showRaiders(lootConfigJson, "t3-lotto-desc");
   filterByClass("t3-lotto-desc");
 }
 
 /* Load T2.5 Prio Descending */
-var requestURL5 = 'https://tntclassic-json.s3-us-west-1.amazonaws.com/LootConfig_T2PT5Priority_Desc.json';
-var request5 = new XMLHttpRequest();
-request5.open('GET', requestURL5);
-request5.responseType = 'json';
-request5.send();
+var t2pt5PrioDescUrl = 'https://tntclassic-json.s3-us-west-1.amazonaws.com/LootConfig_T2PT5Priority_Desc.json';
+var t2pt5PrioDescRequest = new XMLHttpRequest();
+t2pt5PrioDescRequest.open('GET', t2pt5PrioDescUrl);
+t2pt5PrioDescRequest.responseType = 'json';
+t2pt5PrioDescRequest.send();
 
-request5.onload = function () {
-  var raiders = request5.response;
-  populateLastCheckedTimestamp(raiders);
-  showRaiders(raiders, "t2pt5-prio-desc");
+t2pt5PrioDescRequest.onload = function () {
+  var lootConfigJson = t2pt5PrioDescRequest.response;
+  populateLastCheckedTimestamp(lootConfigJson);
+  showRaiders(lootConfigJson, "t2pt5-prio-desc");
   filterByClass("t2pt5-prio-desc");
 }
 
 /* Load T2.5 Lotto Descending */
-var requestURL6 = 'https://tntclassic-json.s3-us-west-1.amazonaws.com/LootConfig_T2PT5Lottery_Desc.json';
-var request6 = new XMLHttpRequest();
-request6.open('GET', requestURL6);
-request6.responseType = 'json';
-request6.send();
-request6.onload = function () {
-  var raiders = request6.response;
-  populateLastCheckedTimestamp(raiders);
-  showRaiders(raiders, "t2pt5-lotto-desc");
+var t2pt5LottoDescUrl = 'https://tntclassic-json.s3-us-west-1.amazonaws.com/LootConfig_T2PT5Lottery_Desc.json';
+var t2pt5LottoDescRequest = new XMLHttpRequest();
+t2pt5LottoDescRequest.open('GET', t2pt5LottoDescUrl);
+t2pt5LottoDescRequest.responseType = 'json';
+t2pt5LottoDescRequest.send();
+t2pt5LottoDescRequest.onload = function () {
+  var lootConfigJson = t2pt5LottoDescRequest.response;
+  populateLastCheckedTimestamp(lootConfigJson);
+  showRaiders(lootConfigJson, "t2pt5-lotto-desc");
   filterByClass("t2pt5-lotto-desc");
 }
 
 /* Load T2 Prio Descending */
-var requestURL = 'https://tntclassic-json.s3-us-west-1.amazonaws.com/LootConfig_T2Priority_Desc.json';
-var request = new XMLHttpRequest();
-request.open('GET', requestURL);
-request.responseType = 'json';
-request.send();
+var t2PrioDescUrl = 'https://tntclassic-json.s3-us-west-1.amazonaws.com/LootConfig_T2Priority_Desc.json';
+var t2PrioDescRequest = new XMLHttpRequest();
+t2PrioDescRequest.open('GET', t2PrioDescUrl);
+t2PrioDescRequest.responseType = 'json';
+t2PrioDescRequest.send();
 
-request.onload = function () {
-  var raiders = request.response;
-  populateLastCheckedTimestamp(raiders);
-  showRaiders(raiders, "t2-prio-desc");
+t2PrioDescRequest.onload = function () {
+  var lootConfigJson = t2PrioDescRequest.response;
+  populateLastCheckedTimestamp(lootConfigJson);
+  showRaiders(lootConfigJson, "t2-prio-desc");
   filterByClass("t2-prio-desc");
 }
 
 /* Load T2 Lotto Descending */
-var requestURL2 = 'https://tntclassic-json.s3-us-west-1.amazonaws.com/LootConfig_T2Lottery_Desc.json';
-var request2 = new XMLHttpRequest();
-request2.open('GET', requestURL2);
-request2.responseType = 'json';
-request2.send();
-request2.onload = function () {
-  var raiders = request2.response;
-  populateLastCheckedTimestamp(raiders);
-  showRaiders(raiders, "t2-lotto-desc");
+var t2LottoDescUrl = 'https://tntclassic-json.s3-us-west-1.amazonaws.com/LootConfig_T2Lottery_Desc.json';
+var t2LottoDescRequest = new XMLHttpRequest();
+t2LottoDescRequest.open('GET', t2LottoDescUrl);
+t2LottoDescRequest.responseType = 'json';
+t2LottoDescRequest.send();
+t2LottoDescRequest.onload = function () {
+  var lootConfigJson = t2LottoDescRequest.response;
+  populateLastCheckedTimestamp(lootConfigJson);
+  showRaiders(lootConfigJson, "t2-lotto-desc");
   filterByClass("t2-lotto-desc");
 
 }
 
-/* Load T1 Lotto Descending */
-var requestURL3 = 'https://tntclassic-json.s3-us-west-1.amazonaws.com/LootConfig_T1Lottery_Desc.json';
-var request3 = new XMLHttpRequest();
-request3.open('GET', requestURL3);
-request3.responseType = 'json';
-request3.send();
-request3.onload = function () {
-  var raiders = request3.response;
-  populateLastCheckedTimestamp(raiders);
-  showRaiders(raiders, "t1-lotto-desc");
-  filterByClass("t1-lotto-desc");
+/* Load T1 Prio Descending */
+var t1PrioDescUrl = 'https://tntclassic-json.s3-us-west-1.amazonaws.com/LootConfig_T1Priority_Desc.json';
+var t1PrioDescRequest = new XMLHttpRequest();
+t1PrioDescRequest.open('GET', t1PrioDescUrl);
+t1PrioDescRequest.responseType = 'json';
+t1PrioDescRequest.send();
+t1PrioDescRequest.onload = function () {
+  var lootConfigJson = t1PrioDescRequest.response;
+  populateLastCheckedTimestamp(lootConfigJson);
+  showRaiders(lootConfigJson, "t1-prio-desc");
+  filterByClass("t1-Prio-desc");
 }
 
-/* Load T1 Prio Descending */
-var requestURL4 = 'https://tntclassic-json.s3-us-west-1.amazonaws.com/LootConfig_T1Priority_Desc.json';
-var request4 = new XMLHttpRequest();
-request4.open('GET', requestURL4);
-request4.responseType = 'json';
-request4.send();
-request4.onload = function () {
-  var raiders = request4.response;
-  populateLastCheckedTimestamp(raiders);
-  showRaiders(raiders, "t1-prio-desc");
-  filterByClass("t1-Prio-desc");
+/* Load T1 Lotto Descending */
+var t1LottoDescUrl = 'https://tntclassic-json.s3-us-west-1.amazonaws.com/LootConfig_T1Lottery_Desc.json';
+var t1LottoDescRequest = new XMLHttpRequest();
+t1LottoDescRequest.open('GET', t1LottoDescUrl);
+t1LottoDescRequest.responseType = 'json';
+t1LottoDescRequest.send();
+t1LottoDescRequest.onload = function () {
+  var lootConfigJson = t1LottoDescRequest.response;
+  populateLastCheckedTimestamp(lootConfigJson);
+  showRaiders(lootConfigJson, "t1-lotto-desc");
+  filterByClass("t1-lotto-desc");
 }
 
 // Pulls the dateModified value from the JSON response and sets it in the header at the top of the page
@@ -117,8 +117,8 @@ function populateLastCheckedTimestamp(jsonObj) {
   document.getElementById("lastUpdated").innerHTML += ' @ ' + jsonObj['timeModified'];
 }
 
-function showRaiders(jsonObj, sorttype) {
-  var tntRaiders = jsonObj['raiders'];
+function showRaiders(lootConfigJson, sorttype) {
+  var tntRaiders = lootConfigJson['raiders'];
   var sortType = sorttype;
 
   for (var i = 0; i < tntRaiders.length; i++) {
