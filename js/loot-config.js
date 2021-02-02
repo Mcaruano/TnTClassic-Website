@@ -317,7 +317,6 @@ function showRaiders(lootConfigJson, sorttype) {
 
 /* CHECK BOXES STUFF */
 
-
 $(document).ready(function () {
   $('a[href="#uncheck"]').click(function () {
     $(".filter-class-warrior").prop("checked", false);
@@ -351,16 +350,6 @@ $(document).ready(function () {
     $(".filter-class-warlock").prop("checked", true);
     $(".filter-class-druid").prop("checked", true);
 
-    /*
-    $(".card-raider.Warrior").show();
-    $(".card-raider.Priest").show();
-    $(".card-raider.Mage").show();
-    $(".card-raider.Rogue").show();
-    $(".card-raider.Hunter").show();
-    $(".card-raider.Paladin").show();
-    $(".card-raider.Warlock").show();
-    $(".card-raider.Druid").show();
-    */
     $(".card-raider.Warrior").hide();
     $(".card-raider.Priest").hide();
     $(".card-raider.Mage").hide();
@@ -371,27 +360,14 @@ $(document).ready(function () {
     $(".card-raider.Druid").hide();
 
     var dropdownValue = $("#dropdown-sort").val();
-    //alert("Check all check: "+dropdownValue);
     filterByClass(dropdownValue);
     updateStorage();
   });
 });
 
-
 var formValues = JSON.parse(localStorage.getItem('formValues')) || {};
 var $checkboxes = $("#filter-by-class :checkbox");
 var $button = $("#filter-by-class button");
-
-// TODO: Is this method even necessary?
-function allChecked() {
-  return $checkboxes.length === $checkboxes.filter(":checked").length;
-}
-
-// TODO: Is this method even necessary?
-function handleButtonClick() {
-  $checkboxes.prop("checked", allChecked() ? false : true)
-  //filterByClass(); - I'm guessing this isn't necessary because 
-}
 
 function updateStorage() {
   $checkboxes.each(function () {
