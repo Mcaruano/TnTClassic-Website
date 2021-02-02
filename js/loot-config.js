@@ -382,11 +382,6 @@ $checkboxes.on("change", function () {
   filterByClass(dropdownValue);
 });
 
-// TODO: Do I need this? Can I fold it into the other .ready() call? Do two of these cause issues?
-$(document).ready(function () {
-  initChecks();
-});
-
 setTimeout(function () {
   initSortBy();
   var dropdownValue = $("#dropdown-sort").val();
@@ -456,6 +451,8 @@ function filterByClass(sortTypeVal) {
 /* DROP DOWN SORT STUFF */
 
 $(document).ready(function () {
+  initChecks();
+
   $("#dropdown-sort").change(function () {
     var selectedValue = $(this).val();
     sortBy(selectedValue);
