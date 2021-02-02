@@ -382,49 +382,31 @@ var formValues = JSON.parse(localStorage.getItem('formValues')) || {};
 var $checkboxes = $("#filter-by-class :checkbox");
 var $button = $("#filter-by-class button");
 
+// TODO: Is this method even necessary?
 function allChecked() {
   return $checkboxes.length === $checkboxes.filter(":checked").length;
 }
-/*
-	function updateButtonStatus(){
-		$button.text(allChecked()? "Uncheck all" : "Check all");
-	}
-*/
 
+// TODO: Is this method even necessary?
 function handleButtonClick() {
   $checkboxes.prop("checked", allChecked() ? false : true)
-  //filterByClass();
+  //filterByClass(); - I'm guessing this isn't necessary because 
 }
 
 function updateStorage() {
   $checkboxes.each(function () {
     formValues[this.id] = this.checked;
   });
-
-  //formValues["buttonText"] = $button.text();
   localStorage.setItem("formValues", JSON.stringify(formValues));
 }
-/*
-	$button.on("click", function() {
-		handleButtonClick();
-		updateButtonStatus();
-	});
-*/
 
 $checkboxes.on("change", function () {
-  //updateButtonStatus();
   updateStorage();
-  //alert("Change");
   var dropdownValue = $("#dropdown-sort").val();
   filterByClass(dropdownValue);
 });
 
-$(function () {
-  //initChecks();
-
-});
-
-
+// TODO: Do I need this? Can I fold it into the other .ready() call? Do two of these cause issues?
 $(document).ready(function () {
   initChecks();
 });
@@ -433,7 +415,6 @@ setTimeout(function () {
   initSortBy();
   var dropdownValue = $("#dropdown-sort").val();
   filterByClass(dropdownValue);
-
 }, 600);
 
 $button.text(formValues["buttonText"]);
@@ -442,11 +423,9 @@ function initChecks() {
   // On page load
   $.each(formValues, function (key, value) {
     $("#" + key).prop('checked', value);
-    //alert("init?");
-
-
   });
 }
+
 function filterByClass(sortTypeVal) {
   if ($('.filter-class-warrior').is(":checked")) {
     $(".card-raider." + sortTypeVal + ".Warrior").show();
@@ -501,16 +480,8 @@ function filterByClass(sortTypeVal) {
 /* DROP DOWN SORT STUFF */
 
 $(document).ready(function () {
-
-  //var value = document.getElementById('dropdown-sort').value;
-  //alert(value);
-
-
   $("#dropdown-sort").change(function () {
-    //var selectedText = $(this).find("option:selected").text();
     var selectedValue = $(this).val();
-    //alert("Selected Text: " + selectedText + " Value: " + selectedValue);
-
     sortBy(selectedValue);
   });
 });
