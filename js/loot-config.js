@@ -448,252 +448,50 @@ function initChecks() {
 }
 function filterByClass(sortTypeVal) {
   if ($('.filter-class-warrior').is(":checked")) {
-    switch (sortTypeVal) {
-      case "1":
-        $(".card-raider.t2-prio-desc.Warrior").show();
-        break;
-      case "2":
-        $(".card-raider.t2-lotto-desc.Warrior").show();
-        break;
-      case "3":
-        $(".card-raider.t1-prio-desc.Warrior").show();
-        break;
-      case "4":
-        $(".card-raider.t1-lotto-desc.Warrior").show();
-        break;
-      case "5":
-        $(".card-raider.t2pt5-prio-desc.Warrior").show();
-        break;
-      case "6":
-        $(".card-raider.t2pt5-lotto-desc.Warrior").show();
-        break;
-      case "7":
-        $(".card-raider.t3-prio-desc.Warrior").show();
-        break;
-      case "8":
-        $(".card-raider.t3-lotto-desc.Warrior").show();
-        break;
-    }
+    $(".card-raider." + sortTypeVal + ".Warrior").show();
   }
   else
     $(".card-raider.Warrior").hide();
 
-
   if ($('.filter-class-priest').is(":checked")) {
-    switch (sortTypeVal) {
-      case "1":
-        $(".card-raider.t2-prio-desc.Priest").show();
-        break;
-      case "2":
-        $(".card-raider.t2-lotto-desc.Priest").show();
-        break;
-      case "3":
-        $(".card-raider.t1-prio-desc.Priest").show();
-        break;
-      case "4":
-        $(".card-raider.t1-lotto-desc.Priest").show();
-        break;
-      case "5":
-        $(".card-raider.t2pt5-prio-desc.Priest").show();
-        break;
-      case "6":
-        $(".card-raider.t2pt5-lotto-desc.Priest").show();
-        break;
-      case "7":
-        $(".card-raider.t3-prio-desc.Priest").show();
-        break;
-      case "8":
-        $(".card-raider.t3-lotto-desc.Priest").show();
-        break;
-    }
+    $(".card-raider." + sortTypeVal + ".Priest").show();
   }
   else {
     $(".card-raider.Priest").hide();
   }
 
   if ($('.filter-class-mage').is(":checked")) {
-    switch (sortTypeVal) {
-      case "1":
-        $(".card-raider.t2-prio-desc.Mage").show();
-        break;
-      case "2":
-        $(".card-raider.t2-lotto-desc.Mage").show();
-        break;
-      case "3":
-        $(".card-raider.t1-prio-desc.Mage").show();
-        break;
-      case "4":
-        $(".card-raider.t1-lotto-desc.Mage").show();
-        break;
-      case "5":
-        $(".card-raider.t2pt5-prio-desc.Mage").show();
-        break;
-      case "6":
-        $(".card-raider.t2pt5-lotto-desc.Mage").show();
-        break;
-      case "7":
-        $(".card-raider.t3-prio-desc.Mage").show();
-        break;
-      case "8":
-        $(".card-raider.t3-lotto-desc.Mage").show();
-        break;
-    }
+    $(".card-raider." + sortTypeVal + ".Mage").show();
   }
   else
     $(".card-raider.Mage").hide();
 
   if ($('.filter-class-rogue').is(":checked")) {
-    switch (sortTypeVal) {
-      case "1":
-        $(".card-raider.t2-prio-desc.Rogue").show();
-        break;
-      case "2":
-        $(".card-raider.t2-lotto-desc.Rogue").show();
-        break;
-      case "3":
-        $(".card-raider.t1-prio-desc.Rogue").show();
-        break;
-      case "4":
-        $(".card-raider.t1-lotto-desc.Rogue").show();
-        break;
-      case "5":
-        $(".card-raider.t2pt5-prio-desc.Rogue").show();
-        break;
-      case "6":
-        $(".card-raider.t2pt5-lotto-desc.Rogue").show();
-        break;
-      case "7":
-        $(".card-raider.t3-prio-desc.Rogue").show();
-        break;
-      case "8":
-        $(".card-raider.t3-lotto-desc.Rogue").show();
-        break;
-    }
+    $(".card-raider." + sortTypeVal + ".Rogue").show();
   }
   else
     $(".card-raider.Rogue").hide();
 
   if ($('.filter-class-hunter').is(":checked")) {
-    switch (sortTypeVal) {
-      case "1":
-        $(".card-raider.t2-prio-desc.Hunter").show();
-        break;
-      case "2":
-        $(".card-raider.t2-lotto-desc.Hunter").show();
-        break;
-      case "3":
-        $(".card-raider.t1-prio-desc.Hunter").show();
-        break;
-      case "4":
-        $(".card-raider.t1-lotto-desc.Hunter").show();
-        break;
-      case "5":
-        $(".card-raider.t2pt5-prio-desc.Hunter").show();
-        break;
-      case "6":
-        $(".card-raider.t2pt5-lotto-desc.Hunter").show();
-        break;
-      case "7":
-        $(".card-raider.t3-prio-desc.Hunter").show();
-        break;
-      case "8":
-        $(".card-raider.t3-lotto-desc.Hunter").show();
-        break;
-    }
+    $(".card-raider." + sortTypeVal + ".Hunter").show();
   }
   else
     $(".card-raider.Hunter").hide();
 
   if ($('.filter-class-paladin').is(":checked")) {
-    switch (sortTypeVal) {
-      case "1":
-        $(".card-raider.t2-prio-desc.Paladin").show();
-        break;
-      case "2":
-        $(".card-raider.t2-lotto-desc.Paladin").show();
-        break;
-      case "3":
-        $(".card-raider.t1-prio-desc.Paladin").show();
-        break;
-      case "4":
-        $(".card-raider.t1-lotto-desc.Paladin").show();
-        break;
-      case "5":
-        $(".card-raider.t2pt5-prio-desc.Paladin").show();
-        break;
-      case "6":
-        $(".card-raider.t2pt5-lotto-desc.Paladin").show();
-        break;
-      case "7":
-        $(".card-raider.t3-prio-desc.Paladin").show();
-        break;
-      case "8":
-        $(".card-raider.t3-lotto-desc.Paladin").show();
-        break;
-    }
-
+    $(".card-raider." + sortTypeVal + ".Paladin").show();
   }
   else
     $(".card-raider.Paladin").hide();
 
   if ($('.filter-class-warlock').is(":checked")) {
-    switch (sortTypeVal) {
-      case "1":
-        $(".card-raider.t2-prio-desc.Warlock").show();
-        break;
-      case "2":
-        $(".card-raider.t2-lotto-desc.Warlock").show();
-        break;
-      case "3":
-        $(".card-raider.t1-prio-desc.Warlock").show();
-        break;
-      case "4":
-        $(".card-raider.t1-lotto-desc.Warlock").show();
-        break;
-      case "5":
-        $(".card-raider.t2pt5-prio-desc.Warlock").show();
-        break;
-      case "6":
-        $(".card-raider.t2pt5-lotto-desc.Warlock").show();
-        break;
-      case "7":
-        $(".card-raider.t3-prio-desc.Warlock").show();
-        break;
-      case "8":
-        $(".card-raider.t3-lotto-desc.Warlock").show();
-        break;
-    }
+    $(".card-raider." + sortTypeVal + ".Warlock").show();
   }
   else
     $(".card-raider.Warlock").hide();
 
   if ($('.filter-class-druid').is(":checked")) {
-    switch (sortTypeVal) {
-      case "1":
-        $(".card-raider.t2-prio-desc.Druid").show();
-        break;
-      case "2":
-        $(".card-raider.t2-lotto-desc.Druid").show();
-        break;
-      case "3":
-        $(".card-raider.t1-prio-desc.Druid").show();
-        break;
-      case "4":
-        $(".card-raider.t1-lotto-desc.Druid").show();
-        break;
-      case "5":
-        $(".card-raider.t2pt5-prio-desc.Druid").show();
-        break;
-      case "6":
-        $(".card-raider.t2pt5-lotto-desc.Druid").show();
-        break;
-      case "7":
-        $(".card-raider.t3-prio-desc.Druid").show();
-        break;
-      case "8":
-        $(".card-raider.t3-lotto-desc.Druid").show();
-        break;
-    }
+    $(".card-raider." + sortTypeVal + ".Druid").show();
   }
   else
     $(".card-raider.Druid").hide();
@@ -714,110 +512,19 @@ $(document).ready(function () {
 
     sortBy(selectedValue);
   });
-
-
-
-
-
-
 });
 
 function sortBy(sortTypeValue) {
-  if (sortTypeValue == 1) {
-    //alert("Sort by T2 Prio")
-    $(".card-raider.t2pt5-lotto-desc").hide();
-    $(".card-raider.t2pt5-prio-desc").hide();
-    $(".card-raider.t2-lotto-desc").hide();
-    $(".card-raider.t2-prio-desc").show();
-    $(".card-raider.t1-lotto-desc").hide();
-    $(".card-raider.t1-prio-desc").hide();
-    $(".card-raider.t3-lotto-desc").hide();
-    $(".card-raider.t3-prio-desc").hide();
-    filterByClass("1");
-  }
-  if (sortTypeValue == 2) {
-    //alert("Sort by T2 Lotto")
-    $(".card-raider.t2pt5-lotto-desc").hide();
-    $(".card-raider.t2pt5-prio-desc").hide();
-    $(".card-raider.t2-lotto-desc").show();
-    $(".card-raider.t2-prio-desc").hide();
-    $(".card-raider.t1-lotto-desc").hide();
-    $(".card-raider.t1-prio-desc").hide();
-    $(".card-raider.t3-lotto-desc").hide();
-    $(".card-raider.t3-prio-desc").hide();
-    filterByClass("2");
-  }
-  if (sortTypeValue == 3) {
-    //alert("Sort by T1 Prio")
-    $(".card-raider.t2pt5-lotto-desc").hide();
-    $(".card-raider.t2pt5-prio-desc").hide();
-    $(".card-raider.t2-lotto-desc").hide();
-    $(".card-raider.t2-prio-desc").hide();
-    $(".card-raider.t1-lotto-desc").hide();
-    $(".card-raider.t1-prio-desc").show();
-    $(".card-raider.t3-lotto-desc").hide();
-    $(".card-raider.t3-prio-desc").hide();
-    filterByClass("3");
-  }
-  if (sortTypeValue == 4) {
-    //alert("Sort by T1 Lotto")
-    $(".card-raider.t3-lotto-desc").hide();
-    $(".card-raider.t3-prio-desc").hide();
-    $(".card-raider.t2pt5-lotto-desc").hide();
-    $(".card-raider.t2pt5-prio-desc").hide();
-    $(".card-raider.t2-lotto-desc").hide();
-    $(".card-raider.t2-prio-desc").hide();
-    $(".card-raider.t1-lotto-desc").show();
-    $(".card-raider.t1-prio-desc").hide();
-
-    filterByClass("4");
-  }
-  if (sortTypeValue == 5) {
-    //alert("Sort by T2.5 Prio")
-    $(".card-raider.t3-lotto-desc").hide();
-    $(".card-raider.t3-prio-desc").hide();
-    $(".card-raider.t2pt5-lotto-desc").hide();
-    $(".card-raider.t2pt5-prio-desc").show();
-    $(".card-raider.t2-lotto-desc").hide();
-    $(".card-raider.t2-prio-desc").hide();
-    $(".card-raider.t1-lotto-desc").hide();
-    $(".card-raider.t1-prio-desc").hide();
-    filterByClass("5");
-  }
-  if (sortTypeValue == 6) {
-    //alert("Sort by T2.5 Lotto")
-    $(".card-raider.t3-lotto-desc").hide();
-    $(".card-raider.t3-prio-desc").hide();
-    $(".card-raider.t2pt5-lotto-desc").show();
-    $(".card-raider.t2pt5-prio-desc").hide();
-    $(".card-raider.t2-lotto-desc").hide();
-    $(".card-raider.t2-prio-desc").hide();
-    $(".card-raider.t1-lotto-desc").hide();
-    $(".card-raider.t1-prio-desc").hide();
-    filterByClass("6");
-  }
-  if (sortTypeValue == 7) {
-    $(".card-raider.t3-lotto-desc").hide();
-    $(".card-raider.t3-prio-desc").show();
-    $(".card-raider.t2pt5-lotto-desc").hide();
-    $(".card-raider.t2pt5-prio-desc").hide();
-    $(".card-raider.t2-lotto-desc").hide();
-    $(".card-raider.t2-prio-desc").hide();
-    $(".card-raider.t1-lotto-desc").hide();
-    $(".card-raider.t1-prio-desc").hide();
-    filterByClass("7");
-  }
-  if (sortTypeValue == 8) {
-    $(".card-raider.t3-lotto-desc").show();
-    $(".card-raider.t3-prio-desc").hide();
-    $(".card-raider.t2pt5-lotto-desc").hide();
-    $(".card-raider.t2pt5-prio-desc").hide();
-    $(".card-raider.t2-lotto-desc").hide();
-    $(".card-raider.t2-prio-desc").hide();
-    $(".card-raider.t1-lotto-desc").hide();
-    $(".card-raider.t1-prio-desc").hide();
-    filterByClass("8");
-  }
+  $(".card-raider.t2pt5-lotto-desc").hide();
+  $(".card-raider.t2pt5-prio-desc").hide();
+  $(".card-raider.t2-lotto-desc").hide();
+  $(".card-raider.t2-prio-desc").hide();
+  $(".card-raider.t1-lotto-desc").hide();
+  $(".card-raider.t1-prio-desc").hide();
+  $(".card-raider.t3-lotto-desc").hide();
+  $(".card-raider.t3-prio-desc").hide();
+  $(".card-raider." + sortTypeValue).show();
+  filterByClass(sortTypeValue);
 }
 
 function initSortBy() {
