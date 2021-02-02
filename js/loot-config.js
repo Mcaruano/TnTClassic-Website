@@ -12,7 +12,7 @@ request7.send();
 
 request7.onload = function () {
   var raiders = request7.response;
-  populateHeader(raiders);
+  populateLastCheckedTimestamp(raiders);
   showRaiders(raiders, "t3-prio-desc");
   //filterByClass();
 }
@@ -25,7 +25,7 @@ request8.responseType = 'json';
 request8.send();
 request8.onload = function () {
   var raiders = request8.response;
-  //populateHeader(raiders);
+  populateLastCheckedTimestamp(raiders);
   showRaiders(raiders, "t3-lotto-desc");
   //filterByClass();
 }
@@ -39,7 +39,7 @@ request5.send();
 
 request5.onload = function () {
   var raiders = request5.response;
-  //populateHeader(raiders);
+  populateLastCheckedTimestamp(raiders);
   showRaiders(raiders, "t2pt5-prio-desc");
   //filterByClass();
 }
@@ -52,7 +52,7 @@ request6.responseType = 'json';
 request6.send();
 request6.onload = function () {
   var raiders = request6.response;
-  //populateHeader(raiders);
+  populateLastCheckedTimestamp(raiders);
   showRaiders(raiders, "t2pt5-lotto-desc");
   //filterByClass();
 }
@@ -66,7 +66,7 @@ request.send();
 
 request.onload = function () {
   var raiders = request.response;
-  //populateHeader(raiders);
+  populateLastCheckedTimestamp(raiders);
   showRaiders(raiders, "t2-prio-desc");
   //filterByClass();
 }
@@ -79,7 +79,7 @@ request2.responseType = 'json';
 request2.send();
 request2.onload = function () {
   var raiders = request2.response;
-  //populateHeader(raiders);
+  populateLastCheckedTimestamp(raiders);
   showRaiders(raiders, "t2-lotto-desc");
   //filterByClass();
 
@@ -93,7 +93,7 @@ request3.responseType = 'json';
 request3.send();
 request3.onload = function () {
   var raiders = request3.response;
-  //populateHeader(raiders);
+  populateLastCheckedTimestamp(raiders);
   showRaiders(raiders, "t1-lotto-desc");
   //filterByClass();
 
@@ -107,31 +107,13 @@ request4.responseType = 'json';
 request4.send();
 request4.onload = function () {
   var raiders = request4.response;
-  //populateHeader(raiders);
+  populateLastCheckedTimestamp(raiders);
   showRaiders(raiders, "t1-prio-desc");
 }
 
-
-
-//var $btnSortLottoDesc = $(".sort-lotto-desc");
-/*
-btnSortLottoDesc.on("click", function() {
-    $(".card-raider.t2-lotto-desc").show();
-    $(".card-raider.t2-prio-desc").hide();
-    filterByClass();
-});
-*/
-
-function populateHeader(jsonObj) {
-  //var myH1 = document.createElement('span');
-  //myH1.textContent = jsonObj['dateModified'];
+function populateLastCheckedTimestamp(jsonObj) {
   document.getElementById("lastUpdated").innerHTML += jsonObj['dateModified'];
-  //section.appendChild(myH1);
-
-  //var myPara = document.createElement('span');
   document.getElementById("lastUpdated").innerHTML += ' @ ' + jsonObj['timeModified'];
-  //section.appendChild(myPara);
-
 }
 
 function showRaiders(jsonObj, sorttype) {
@@ -498,12 +480,9 @@ function filterByClass(sortTypeVal) {
 
 
   if ($('.filter-class-priest').is(":checked")) {
-    //alert("fbc check 1: priest checked");
-    //alert("fbc check 2: "+sortTypeVal);
     switch (sortTypeVal) {
       case "1":
         $(".card-raider.t2-prio-desc.Priest").show();
-        //alert("priest prio t2 desc");
         break;
       case "2":
         $(".card-raider.t2-lotto-desc.Priest").show();
@@ -515,11 +494,9 @@ function filterByClass(sortTypeVal) {
         $(".card-raider.t1-lotto-desc.Priest").show();
         break;
       case "5":
-        //alert("priest prio t2.5");
         $(".card-raider.t2pt5-prio-desc.Priest").show();
         break;
       case "6":
-        //alert("priest lotto t2.5");
         $(".card-raider.t2pt5-lotto-desc.Priest").show();
         break;
       case "7":
@@ -531,7 +508,6 @@ function filterByClass(sortTypeVal) {
     }
   }
   else {
-    //alert ("I shouldn't see this for this test case");
     $(".card-raider.Priest").hide();
   }
 
