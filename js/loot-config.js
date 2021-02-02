@@ -112,7 +112,7 @@ request4.onload = function () {
 }
 
 function populateLastCheckedTimestamp(jsonObj) {
-  document.getElementById("lastUpdated").innerHTML += jsonObj['dateModified'];
+  document.getElementById("lastUpdated").innerHTML = jsonObj['dateModified'];
   document.getElementById("lastUpdated").innerHTML += ' @ ' + jsonObj['timeModified'];
 }
 
