@@ -14,7 +14,7 @@ request7.onload = function () {
   var raiders = request7.response;
   populateLastCheckedTimestamp(raiders);
   showRaiders(raiders, "t3-prio-desc");
-  //filterByClass();
+  filterByClass("t3-prio-desc");
 }
 
 /* Load T3 Lotto Descending */
@@ -27,7 +27,7 @@ request8.onload = function () {
   var raiders = request8.response;
   populateLastCheckedTimestamp(raiders);
   showRaiders(raiders, "t3-lotto-desc");
-  //filterByClass();
+  filterByClass("t3-lotto-desc");
 }
 
 /* Load T2.5 Prio Descending */
@@ -41,7 +41,7 @@ request5.onload = function () {
   var raiders = request5.response;
   populateLastCheckedTimestamp(raiders);
   showRaiders(raiders, "t2pt5-prio-desc");
-  //filterByClass();
+  filterByClass("t2pt5-prio-desc");
 }
 
 /* Load T2.5 Lotto Descending */
@@ -54,7 +54,7 @@ request6.onload = function () {
   var raiders = request6.response;
   populateLastCheckedTimestamp(raiders);
   showRaiders(raiders, "t2pt5-lotto-desc");
-  //filterByClass();
+  filterByClass("t2pt5-lotto-desc");
 }
 
 /* Load T2 Prio Descending */
@@ -68,7 +68,7 @@ request.onload = function () {
   var raiders = request.response;
   populateLastCheckedTimestamp(raiders);
   showRaiders(raiders, "t2-prio-desc");
-  //filterByClass();
+  filterByClass("t2-prio-desc");
 }
 
 /* Load T2 Lotto Descending */
@@ -81,11 +81,11 @@ request2.onload = function () {
   var raiders = request2.response;
   populateLastCheckedTimestamp(raiders);
   showRaiders(raiders, "t2-lotto-desc");
-  //filterByClass();
+  filterByClass("t2-lotto-desc");
 
 }
 
-/*		/* Load T1 Lotto Descending */
+/* Load T1 Lotto Descending */
 var requestURL3 = 'https://tntclassic-json.s3-us-west-1.amazonaws.com/LootConfig_T1Lottery_Desc.json';
 var request3 = new XMLHttpRequest();
 request3.open('GET', requestURL3);
@@ -95,11 +95,10 @@ request3.onload = function () {
   var raiders = request3.response;
   populateLastCheckedTimestamp(raiders);
   showRaiders(raiders, "t1-lotto-desc");
-  //filterByClass();
-
+  filterByClass("t1-lotto-desc");
 }
 
-/* Load T2 Lotto Descending */
+/* Load T1 Prio Descending */
 var requestURL4 = 'https://tntclassic-json.s3-us-west-1.amazonaws.com/LootConfig_T1Priority_Desc.json';
 var request4 = new XMLHttpRequest();
 request4.open('GET', requestURL4);
@@ -109,8 +108,10 @@ request4.onload = function () {
   var raiders = request4.response;
   populateLastCheckedTimestamp(raiders);
   showRaiders(raiders, "t1-prio-desc");
+  filterByClass("t1-Prio-desc");
 }
 
+// Pulls the dateModified value from the JSON response and sets it in the header at the top of the page
 function populateLastCheckedTimestamp(jsonObj) {
   document.getElementById("lastUpdated").innerHTML = jsonObj['dateModified'];
   document.getElementById("lastUpdated").innerHTML += ' @ ' + jsonObj['timeModified'];
