@@ -2,6 +2,7 @@ import logging
 import boto3
 from botocore.exceptions import ClientError
 import os
+from progress.bar import IncrementalBar
 
 AWS_WEBSITE_BUCKET_NAME = 'tntclassicwow.com'
 
@@ -51,6 +52,19 @@ def determine_content_type(fileName):
     
     return content_type
 
+"""
+Does what it says. This is for the sole purpose of creating an accurate Progress Bar
+"""
+def return_total_num_of_asset_files(scriptDir):
+    subDirs = next(os.walk(scriptDir))[1]
+    numFiles = 0
+    for subDir in subDirs:
+        if subDir in IGNORE_DIRS: continue
+        for fileName in os.listdir(os.path.join(scriptDir, subDir)):
+            if fileName in IGNORE_FILES: continue
+            numFiles+=1
+    return numFiles
+
 if __name__ == "__main__":
     scriptPath = os.path.realpath(__file__)
     scriptDir = os.path.dirname(scriptPath)
@@ -65,8 +79,11 @@ if __name__ == "__main__":
 
     # For each subDir within the top-level directory, upload all files using an ObjectName of subdir/fileName
     # to recreate the folder structure within S3
+    progress_bar = IncrementalBar("   Uploading website assets to S3", max=return_total_num_of_asset_files(scriptDir), suffix='%(percent)d%% ')    
     for subDir in subDirs:
         if subDir in IGNORE_DIRS: continue
         for fileName in os.listdir(os.path.join(scriptDir, subDir)):
             if fileName in IGNORE_FILES: continue
-            upload_file(os.path.join(scriptDir, subDir, fileName), AWS_WEBSITE_BUCKET_NAME, os.path.join(subDir, fileName), determine_content_type(fileName))            
+            upload_file(os.path.join(scriptDir, subDir, fileName), AWS_WEBSITE_BUCKET_NAME, os.path.join(subDir, fileName), determine_content_type(fileName))
+            progress_bar.next()            
+    progress_bar.finish()            
