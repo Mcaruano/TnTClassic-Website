@@ -129,7 +129,7 @@ p strong { font-weight:bold; }
 
 .loot-config-list-label { font-size:12px; font-weight:bold; color:#000; text-transform: uppercase; margin-bottom:8px; /*text-align:center;*/ }
 .loot-config-list ul { padding-inline-start: 0px; color:#9C9C9C; font-size:12px; margin-top:8px; }
-.loot-config-list ul li { position: relative; }
+.loot-config-list ul li { position: relative; margin-left: 20px; }
 .loot-config-list ul li, .loot-config-list ul li a { padding-left:2px; padding-bottom:2px; color:#000;}
 
 
