@@ -113,8 +113,8 @@ p strong { font-weight:bold; }
 .loot-config-lists .dkp-value { padding-top:8px; }
 .loot-config-lists .dkp-value.t5 { /* margin-top:8px; border-top:1px solid #D6CCCC; padding-top:8px;*/ color:#2e87a8; }
 .loot-config-lists .dkp-value.t6 { color:#1aa909; }
-.t3-prio-desc .loot-config-lists .priority-dkp-value.dkp-value.t3,
-.t3-lotto-desc .loot-config-lists .lottery-dkp-value.dkp-value.t3,
+.t6pt5-prio-desc .loot-config-lists .priority-dkp-value.dkp-value.t6pt5,
+.t6pt5-lotto-desc .loot-config-lists .lottery-dkp-value.dkp-value.t6pt5,
 .t6-prio-desc .loot-config-lists .priority-dkp-value.dkp-value.t6,
 .t6-lotto-desc .loot-config-lists .lottery-dkp-value.dkp-value.t6,
 .t5-prio-desc .loot-config-lists .priority-dkp-value.dkp-value.t5,
