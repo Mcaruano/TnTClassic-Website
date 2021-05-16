@@ -119,8 +119,8 @@ p strong { font-weight:bold; }
 .t2pt5-lotto-desc .loot-config-lists .lottery-dkp-value.dkp-value.t2pt5,
 .t2-prio-desc .loot-config-lists .priority-dkp-value.dkp-value.t2,
 .t2-lotto-desc .loot-config-lists .lottery-dkp-value.dkp-value.t2,
-.t1-prio-desc .loot-config-lists .priority-dkp-value.dkp-value.t1,
-.t1-lotto-desc .loot-config-lists .lottery-dkp-value.dkp-value.t1 { border-top:1px solid #000; }
+.t4-prio-desc .loot-config-lists .priority-dkp-value.dkp-value.t4,
+.t4-lotto-desc .loot-config-lists .lottery-dkp-value.dkp-value.t4 { border-top:1px solid #000; }
 
 .tnt-raider.v2 .loot-config-lists .dkp-count {width:100%;}
 
@@ -151,7 +151,7 @@ p strong { font-weight:bold; }
   .container { width: 90%; }
 
   #header nav.main-nav a.global-nav-hamburger { display:inline; margin-right:0; float:right; }
-	.t2.priority-content, .t2.lottery-content, .t1.priority-content, .t1.lottery-content { margin-top:20px; } 
+	.t2.priority-content, .t2.lottery-content, .t4.priority-content, .t4.lottery-content { margin-top:20px; } 
   .break {
   flex-basis: 100%;
   height: 0;
