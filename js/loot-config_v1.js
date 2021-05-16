@@ -30,7 +30,7 @@ t3LottoDescRequest.onload = function () {
   filterByClass("t3-lotto-desc");
 }
 
-/* Load T2.5 Prio Descending */
+/* Load T6 Prio Descending */
 var t6PrioDescUrl = 'https://tntclassic-json.s3-us-west-1.amazonaws.com/LootConfig_T6Priority_Desc.json';
 var t6PrioDescRequest = new XMLHttpRequest();
 t6PrioDescRequest.open('GET', t6PrioDescUrl);
@@ -44,7 +44,7 @@ t6PrioDescRequest.onload = function () {
   filterByClass("t6-prio-desc");
 }
 
-/* Load T2.5 Lotto Descending */
+/* Load T6 Lotto Descending */
 var t6LottoDescUrl = 'https://tntclassic-json.s3-us-west-1.amazonaws.com/LootConfig_T6Lottery_Desc.json';
 var t6LottoDescRequest = new XMLHttpRequest();
 t6LottoDescRequest.open('GET', t6LottoDescUrl);
@@ -212,7 +212,7 @@ function showRaiders(lootConfigJson, sorttype) {
       t2LottoList.appendChild(t2LottoListItem);
     }
 
-    /* T2.5 */
+    /* T6 */
     var t6PrioPlayerLootConfig = tntRaiders[i].T6_PriorityConfig;
     for (var j = 0; j < t6PrioPlayerLootConfig.length; j++) {
       var t6PrioListItem = document.createElement('li');
