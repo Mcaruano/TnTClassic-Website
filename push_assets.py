@@ -4,7 +4,8 @@ from botocore.exceptions import ClientError
 import os
 from progress.bar import IncrementalBar
 
-AWS_WEBSITE_BUCKET_NAME = 'tntclassicwow.com'
+# AWS_WEBSITE_BUCKET_NAME = 'tntclassicwow.com'
+AWS_WEBSITE_BUCKET_NAME = 'amazon-cloudfront-secure-static-site-s3bucketroot-19a43nsev9lp9'
 
 IGNORE_FILES = ['push_assets.py']
 IGNORE_DIRS = ['.git']
