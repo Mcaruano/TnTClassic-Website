@@ -95,7 +95,7 @@ t4PrioDescRequest.onload = function () {
   var lootConfigJson = t4PrioDescRequest.response;
   populateLastCheckedTimestamp(lootConfigJson);
   showRaiders(lootConfigJson, "t4-prio-desc");
-  filterByClass("t4-Prio-desc");
+  filterByClass("t4-prio-desc");
 }
 
 /* Load T4 Lotto Descending */
