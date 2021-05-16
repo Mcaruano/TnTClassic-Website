@@ -79,6 +79,7 @@ p strong { font-weight:bold; }
 .card-raider.class-mage .raider-info { background-color: #40C7EB;}
 .card-raider.class-warlock .raider-info { background-color: #6e6eb3;}
 .card-raider.class-paladin .raider-info { background-color: #de8cb0;}
+.card-raider.class-shaman .raider-info { background-color: #1f29e0;}
 
 .card-raider .raider-info.Warrior { background-color: #C79C6E;}
 .card-raider .raider-info.Priest { background-color: #F6F6F6;}
@@ -88,6 +89,7 @@ p strong { font-weight:bold; }
 .card-raider .raider-info.Mage { background-color: #40C7EB;}
 .card-raider .raider-info.Warlock { background-color: #62628e;}
 .card-raider .raider-info.Paladin { background-color: #de8cb0;}
+.card-raider .raider-info.Shaman { background-color: #1f29e0;}
 
 .card-raider .raider-info, .card-raider .raider-info p { color:#FFF; }
 

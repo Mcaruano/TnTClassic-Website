@@ -327,6 +327,7 @@ $(document).ready(function () {
     $(".filter-class-paladin").prop("checked", false);
     $(".filter-class-warlock").prop("checked", false);
     $(".filter-class-druid").prop("checked", false);
+    $(".filter-class-shaman").prop("checked", false);
 
     $(".card-raider.Warrior").hide();
     $(".card-raider.Priest").hide();
@@ -336,6 +337,7 @@ $(document).ready(function () {
     $(".card-raider.Paladin").hide();
     $(".card-raider.Warlock").hide();
     $(".card-raider.Druid").hide();
+    $(".card-raider.Shaman").hide();
 
     updateStorage();
   });
@@ -349,6 +351,7 @@ $(document).ready(function () {
     $(".filter-class-paladin").prop("checked", true);
     $(".filter-class-warlock").prop("checked", true);
     $(".filter-class-druid").prop("checked", true);
+    $(".filter-class-shaman").prop("checked", true);
 
     $(".card-raider.Warrior").hide();
     $(".card-raider.Priest").hide();
@@ -358,6 +361,7 @@ $(document).ready(function () {
     $(".card-raider.Paladin").hide();
     $(".card-raider.Warlock").hide();
     $(".card-raider.Druid").hide();
+    $(".card-raider.Shaman").hide();
 
     var dropdownValue = $("#dropdown-sort").val();
     filterByClass(dropdownValue);
@@ -446,6 +450,12 @@ function filterByClass(sortTypeVal) {
   }
   else
     $(".card-raider.Druid").hide();
+
+  if ($('.filter-class-shaman').is(":checked")) {
+    $(".card-raider." + sortTypeVal + ".Shaman").show();
+  }
+  else
+    $(".card-raider.Shaman").hide();
 }
 
 /* DROP DOWN SORT STUFF */
