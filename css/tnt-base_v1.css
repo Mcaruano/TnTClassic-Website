@@ -112,11 +112,11 @@ p strong { font-weight:bold; }
 .loot-config-lists .dkp-label { font-size:11px; color:#4E4E4E; }
 .loot-config-lists .dkp-value { padding-top:8px; }
 .loot-config-lists .dkp-value.t2 { /* margin-top:8px; border-top:1px solid #D6CCCC; padding-top:8px;*/ color:#2e87a8; }
-.loot-config-lists .dkp-value.t2pt5 { color:#1aa909; }
+.loot-config-lists .dkp-value.t6 { color:#1aa909; }
 .t3-prio-desc .loot-config-lists .priority-dkp-value.dkp-value.t3,
 .t3-lotto-desc .loot-config-lists .lottery-dkp-value.dkp-value.t3,
-.t2pt5-prio-desc .loot-config-lists .priority-dkp-value.dkp-value.t2pt5,
-.t2pt5-lotto-desc .loot-config-lists .lottery-dkp-value.dkp-value.t2pt5,
+.t6-prio-desc .loot-config-lists .priority-dkp-value.dkp-value.t6,
+.t6-lotto-desc .loot-config-lists .lottery-dkp-value.dkp-value.t6,
 .t2-prio-desc .loot-config-lists .priority-dkp-value.dkp-value.t2,
 .t2-lotto-desc .loot-config-lists .lottery-dkp-value.dkp-value.t2,
 .t4-prio-desc .loot-config-lists .priority-dkp-value.dkp-value.t4,
