@@ -30,7 +30,7 @@ function showStockedItems(jsonObj) {
     var bankItemQty = document.createElement('div');
     bankItemQty.setAttribute('class', 'bank-item-qty');
 
-    bankItemName.innerHTML = '<a href="https://classic.wowhead.com/item=' + stockedItems[i].ItemID + '" target="_blank" rel="noopener">' + stockedItems[i].Name + '</a> x ' + stockedItems[i].Quantity;
+    bankItemName.innerHTML = '<a href="https://tbc.wowhead.com/item=' + stockedItems[i].ItemID + '" target="_blank" rel="noopener">' + stockedItems[i].Name + '</a> x ' + stockedItems[i].Quantity;
     //bankItemQty.innerHTML = stockedItems[i].Quantity;
 
     //template
@@ -59,7 +59,7 @@ function showStockedItems(jsonObj) {
     sellItemQty.setAttribute('class', 'sell-item-qty');
 
     //alert(sellItems[j].Name);
-    sellItemName.innerHTML = '<a href="https://classic.wowhead.com/item=' + sellItems[j].ItemID + '" target="_blank" rel="noopener">' + sellItems[j].Name + '</a> x ' + sellItems[j].Quantity;
+    sellItemName.innerHTML = '<a href="https://tbc.wowhead.com/item=' + sellItems[j].ItemID + '" target="_blank" rel="noopener">' + sellItems[j].Name + '</a> x ' + sellItems[j].Quantity;
     //sellItemQty.innerHTML = sellItems[j].Quantity;
 
     //template

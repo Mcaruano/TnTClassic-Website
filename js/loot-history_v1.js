@@ -36,6 +36,6 @@ function populateLootHistory(lootHistoryJson) {
     dateCell.innerHTML = lootHistoryJson[i].Timestamp;
     lootModeCell.innerHTML = lootHistoryJson[i].LootMode;
     contentTierCell.innerHTML = lootHistoryJson[i].ItemTier;
-    itemCell.innerHTML = '<a href="https://classic.wowhead.com/item=' + lootHistoryJson[i].ItemID + '" target="_blank" rel="noopener">' + lootHistoryJson[i].ItemName + '</a>';
+    itemCell.innerHTML = '<a href="https://tbc.wowhead.com/item=' + lootHistoryJson[i].ItemID + '" target="_blank" rel="noopener">' + lootHistoryJson[i].ItemName + '</a>';
   }
 }

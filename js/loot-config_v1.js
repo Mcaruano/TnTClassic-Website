@@ -154,7 +154,7 @@ function showRaiders(lootConfigJson, sorttype) {
     var t4PrioPlayerLootConfig = tntRaiders[i].T4_PriorityConfig;
     for (var j = 0; j < t4PrioPlayerLootConfig.length; j++) {
       var t4PrioListItem = document.createElement('li');
-      t4PrioListItem.innerHTML = '<a href="https://classic.wowhead.com/item=' + t4PrioPlayerLootConfig[j].ItemID + '" target="_blank" rel="noopener">' + t4PrioPlayerLootConfig[j].ItemName + '</a>';
+      t4PrioListItem.innerHTML = '<a href="https://tbc.wowhead.com/item=' + t4PrioPlayerLootConfig[j].ItemID + '" target="_blank" rel="noopener">' + t4PrioPlayerLootConfig[j].ItemName + '</a>';
       t4PrioList.appendChild(t4PrioListItem);
       if (t4PrioPlayerLootConfig[j].Quantity > 1) {
         t4PrioListItem.innerHTML += ' x' + t4PrioPlayerLootConfig[j].Quantity;
@@ -162,14 +162,14 @@ function showRaiders(lootConfigJson, sorttype) {
     }
     if (t4PrioPlayerLootConfig.length == 0) {
       var t4PrioListItem = document.createElement('p');
-      t4PrioListItem.innerHTML = "<a href='https://classic.wowhead.com/npc=11956' target='_blank' rel='noopener'>ʕ•ᴥ•ʔ</a>";
+      t4PrioListItem.innerHTML = "<a href='https://tbc.wowhead.com/npc=11956' target='_blank' rel='noopener'>ʕ•ᴥ•ʔ</a>";
       t4PrioList.appendChild(t4PrioListItem);
     }
 
     var t4LottoPlayerLootConfig = tntRaiders[i].T4_LotteryConfig;
     for (var j = 0; j < t4LottoPlayerLootConfig.length; j++) {
       var t4LottoListItem = document.createElement('li');
-      t4LottoListItem.innerHTML = '<a href="https://classic.wowhead.com/item=' + t4LottoPlayerLootConfig[j].ItemID + '" target="_blank" rel="noopener">' + t4LottoPlayerLootConfig[j].ItemName + '</a>';
+      t4LottoListItem.innerHTML = '<a href="https://tbc.wowhead.com/item=' + t4LottoPlayerLootConfig[j].ItemID + '" target="_blank" rel="noopener">' + t4LottoPlayerLootConfig[j].ItemName + '</a>';
       if (t4LottoPlayerLootConfig[j].Quantity > 1) {
         t4LottoListItem.innerHTML += ' x' + t4LottoPlayerLootConfig[j].Quantity;
       }
@@ -177,7 +177,7 @@ function showRaiders(lootConfigJson, sorttype) {
     }
     if (t4LottoPlayerLootConfig.length == 0) {
       var t4LottoListItem = document.createElement('p');
-      t4LottoListItem.innerHTML = "<a href='https://classic.wowhead.com/npc=11325' target='_blank' rel='noopener'>ʕ•ᴥ•ʔ</a>";
+      t4LottoListItem.innerHTML = "<a href='https://tbc.wowhead.com/npc=11325' target='_blank' rel='noopener'>ʕ•ᴥ•ʔ</a>";
       t4LottoList.appendChild(t4LottoListItem);
     }
 
@@ -185,7 +185,7 @@ function showRaiders(lootConfigJson, sorttype) {
     var t5PrioPlayerLootConfig = tntRaiders[i].T5_PriorityConfig;
     for (var j = 0; j < t5PrioPlayerLootConfig.length; j++) {
       var t5PrioListItem = document.createElement('li');
-      t5PrioListItem.innerHTML = '<a href="https://classic.wowhead.com/item=' + t5PrioPlayerLootConfig[j].ItemID + '" target="_blank" rel="noopener">' + t5PrioPlayerLootConfig[j].ItemName + '</a>';
+      t5PrioListItem.innerHTML = '<a href="https://tbc.wowhead.com/item=' + t5PrioPlayerLootConfig[j].ItemID + '" target="_blank" rel="noopener">' + t5PrioPlayerLootConfig[j].ItemName + '</a>';
       if (t5PrioPlayerLootConfig[j].Quantity > 1) {
         t5PrioListItem.innerHTML += ' x' + t5PrioPlayerLootConfig[j].Quantity;
       }
@@ -193,14 +193,14 @@ function showRaiders(lootConfigJson, sorttype) {
     }
     if (t5PrioPlayerLootConfig.length == 0) {
       var t5PrioListItem = document.createElement('p');
-      t5PrioListItem.innerHTML = "<a href='https://classic.wowhead.com/item=22736' target='_blank' rel='noopener'>ʕ•ᴥ•ʔ</a>";
+      t5PrioListItem.innerHTML = "<a href='https://tbc.wowhead.com/item=22736' target='_blank' rel='noopener'>ʕ•ᴥ•ʔ</a>";
       t5PrioList.appendChild(t5PrioListItem);
     }
 
     var t5LottoPlayerLootConfig = tntRaiders[i].T5_LotteryConfig;
     for (var j = 0; j < t5LottoPlayerLootConfig.length; j++) {
       var t5LottoListItem = document.createElement('li');
-      t5LottoListItem.innerHTML = '<a href="https://classic.wowhead.com/item=' + t5LottoPlayerLootConfig[j].ItemID + '" target="_blank" rel="noopener">' + t5LottoPlayerLootConfig[j].ItemName + '</a>';
+      t5LottoListItem.innerHTML = '<a href="https://tbc.wowhead.com/item=' + t5LottoPlayerLootConfig[j].ItemID + '" target="_blank" rel="noopener">' + t5LottoPlayerLootConfig[j].ItemName + '</a>';
       if (t5LottoPlayerLootConfig[j].Quantity > 1) {
         t5LottoListItem.innerHTML += ' x' + t5LottoPlayerLootConfig[j].Quantity;
       }
@@ -208,7 +208,7 @@ function showRaiders(lootConfigJson, sorttype) {
     }
     if (t5LottoPlayerLootConfig.length == 0) {
       var t5LottoListItem = document.createElement('p');
-      t5LottoListItem.innerHTML = "<a href='https://classic.wowhead.com/item=3173' target='_blank' rel='noopener'>ʕ•ᴥ•ʔ</a>";
+      t5LottoListItem.innerHTML = "<a href='https://tbc.wowhead.com/item=3173' target='_blank' rel='noopener'>ʕ•ᴥ•ʔ</a>";
       t5LottoList.appendChild(t5LottoListItem);
     }
 
@@ -216,7 +216,7 @@ function showRaiders(lootConfigJson, sorttype) {
     var t6PrioPlayerLootConfig = tntRaiders[i].T6_PriorityConfig;
     for (var j = 0; j < t6PrioPlayerLootConfig.length; j++) {
       var t6PrioListItem = document.createElement('li');
-      t6PrioListItem.innerHTML = '<a href="https://classic.wowhead.com/item=' + t6PrioPlayerLootConfig[j].ItemID + '" target="_blank" rel="noopener">' + t6PrioPlayerLootConfig[j].ItemName + '</a>';
+      t6PrioListItem.innerHTML = '<a href="https://tbc.wowhead.com/item=' + t6PrioPlayerLootConfig[j].ItemID + '" target="_blank" rel="noopener">' + t6PrioPlayerLootConfig[j].ItemName + '</a>';
       if (t6PrioPlayerLootConfig[j].Quantity > 1) {
         t6PrioListItem.innerHTML += ' x' + t6PrioPlayerLootConfig[j].Quantity;
       }
@@ -224,14 +224,14 @@ function showRaiders(lootConfigJson, sorttype) {
     }
     if (t6PrioPlayerLootConfig.length == 0) {
       var t6PrioListItem = document.createElement('p');
-      t6PrioListItem.innerHTML = "<a href='https://classic.wowhead.com/item=22781' target='_blank' rel='noopener'>ʕ•ᴥ•ʔ</a>";
+      t6PrioListItem.innerHTML = "<a href='https://tbc.wowhead.com/item=22781' target='_blank' rel='noopener'>ʕ•ᴥ•ʔ</a>";
       t6PrioList.appendChild(t6PrioListItem);
     }
 
     var t6LottoPlayerLootConfig = tntRaiders[i].T6_LotteryConfig;
     for (var j = 0; j < t6LottoPlayerLootConfig.length; j++) {
       var t6LottoListItem = document.createElement('li');
-      t6LottoListItem.innerHTML = '<a href="https://classic.wowhead.com/item=' + t6LottoPlayerLootConfig[j].ItemID + '" target="_blank" rel="noopener">' + t6LottoPlayerLootConfig[j].ItemName + '</a>';
+      t6LottoListItem.innerHTML = '<a href="https://tbc.wowhead.com/item=' + t6LottoPlayerLootConfig[j].ItemID + '" target="_blank" rel="noopener">' + t6LottoPlayerLootConfig[j].ItemName + '</a>';
       if (t6LottoPlayerLootConfig[j].Quantity > 1) {
         t6LottoListItem.innerHTML += ' x' + t6LottoPlayerLootConfig[j].Quantity;
       }
@@ -239,7 +239,7 @@ function showRaiders(lootConfigJson, sorttype) {
     }
     if (t6LottoPlayerLootConfig.length == 0) {
       var t6LottoListItem = document.createElement('p');
-      t6LottoListItem.innerHTML = "<a href='https://classic.wowhead.com/item=6185' target='_blank' rel='noopener'>ʕ•ᴥ•ʔ</a>";
+      t6LottoListItem.innerHTML = "<a href='https://tbc.wowhead.com/item=6185' target='_blank' rel='noopener'>ʕ•ᴥ•ʔ</a>";
       t6LottoList.appendChild(t6LottoListItem);
     }
 
@@ -248,7 +248,7 @@ function showRaiders(lootConfigJson, sorttype) {
     var t6pt5PrioPlayerLootConfig = tntRaiders[i].T6PT5_PriorityConfig;
     for (var j = 0; j < t6pt5PrioPlayerLootConfig.length; j++) {
       var t6pt5PrioListItem = document.createElement('li');
-      t6pt5PrioListItem.innerHTML = '<a href="https://classic.wowhead.com/item=' + t6pt5PrioPlayerLootConfig[j].ItemID + '" target="_blank" rel="noopener">' + t6pt5PrioPlayerLootConfig[j].ItemName + '</a>';
+      t6pt5PrioListItem.innerHTML = '<a href="https://tbc.wowhead.com/item=' + t6pt5PrioPlayerLootConfig[j].ItemID + '" target="_blank" rel="noopener">' + t6pt5PrioPlayerLootConfig[j].ItemName + '</a>';
       if (t6pt5PrioPlayerLootConfig[j].Quantity > 1) {
         t6pt5PrioListItem.innerHTML += ' x' + t6pt5PrioPlayerLootConfig[j].Quantity;
       }
@@ -256,14 +256,14 @@ function showRaiders(lootConfigJson, sorttype) {
     }
     if (t6pt5PrioPlayerLootConfig.length == 0) {
       var t6pt5PrioListItem = document.createElement('p');
-      t6pt5PrioListItem.innerHTML = "<a href='https://classic.wowhead.com/item=22781' target='_blank' rel='noopener'>ʕ•ᴥ•ʔ</a>";
+      t6pt5PrioListItem.innerHTML = "<a href='https://tbc.wowhead.com/item=22781' target='_blank' rel='noopener'>ʕ•ᴥ•ʔ</a>";
       t6pt5PrioList.appendChild(t6pt5PrioListItem);
     }
 
     var t6pt5LottoPlayerLootConfig = tntRaiders[i].T6PT5_LotteryConfig;
     for (var j = 0; j < t6pt5LottoPlayerLootConfig.length; j++) {
       var t6pt5LottoListItem = document.createElement('li');
-      t6pt5LottoListItem.innerHTML = '<a href="https://classic.wowhead.com/item=' + t6pt5LottoPlayerLootConfig[j].ItemID + '" target="_blank" rel="noopener">' + t6pt5LottoPlayerLootConfig[j].ItemName + '</a>';
+      t6pt5LottoListItem.innerHTML = '<a href="https://tbc.wowhead.com/item=' + t6pt5LottoPlayerLootConfig[j].ItemID + '" target="_blank" rel="noopener">' + t6pt5LottoPlayerLootConfig[j].ItemName + '</a>';
       if (t6pt5LottoPlayerLootConfig[j].Quantity > 1) {
         t6pt5LottoListItem.innerHTML += ' x' + t6pt5LottoPlayerLootConfig[j].Quantity;
       }
@@ -271,7 +271,7 @@ function showRaiders(lootConfigJson, sorttype) {
     }
     if (t6pt5LottoPlayerLootConfig.length == 0) {
       var t6pt5LottoListItem = document.createElement('p');
-      t6pt5LottoListItem.innerHTML = "<a href='https://classic.wowhead.com/item=6185' target='_blank' rel='noopener'>ʕ•ᴥ•ʔ</a>";
+      t6pt5LottoListItem.innerHTML = "<a href='https://tbc.wowhead.com/item=6185' target='_blank' rel='noopener'>ʕ•ᴥ•ʔ</a>";
       t6pt5LottoList.appendChild(t6pt5LottoListItem);
     }
 
