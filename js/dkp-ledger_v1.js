@@ -20,17 +20,17 @@ function populateLedger(transactionHistoryJson) {
     // Need to offset by one to account for the title row
     var row = table.insertRow(i + 1);
 
-    // td0 = Date
-    // td1 = Tier
-    // td2 = Loot Mode
-    // td3 = Player
+    // td0 = Player
+    // td1 = Date
+    // td2 = Tier
+    // td3 = Loot Mode
     // td4 = DKP Before
     // td5 = DKP After
     // td6 = Message
-    var dateCell = row.insertCell(0);
-    var contentTierCell = row.insertCell(1);
-    var lootModeCell = row.insertCell(2);
-    var playerCell = row.insertCell(3);
+    var playerCell = row.insertCell(0);
+    var dateCell = row.insertCell(1);
+    var contentTierCell = row.insertCell(2);
+    var lootModeCell = row.insertCell(3);
     var dkpBeforeCell = row.insertCell(4);
     var dkpAfterCell = row.insertCell(5);
     var messageCell = row.insertCell(6);

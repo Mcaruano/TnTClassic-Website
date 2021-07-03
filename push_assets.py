@@ -6,7 +6,7 @@ from progress.bar import IncrementalBar
 
 AWS_WEBSITE_BUCKET_NAME = 'tntclassicwow.com'
 
-IGNORE_FILES = ['push_assets.py']
+IGNORE_FILES = ['push_assets.py', 'lambda_function.py']
 IGNORE_DIRS = ['.git']
 
 """
