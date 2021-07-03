@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Loot History — There's No Tomorrow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/materialize_v1.css" />
+    <link rel="stylesheet" type="text/css" href="css/tnt-base_v1.css" />
+    <style>
+      body, { background: radial-gradient(45.03% 33244.57% at 52.6% 100%, #0D2E3C 0%, #000000 100%);}
+      h4, h5 { color: #FFF; padding-bottom:18px; }
+      .iconmedium { margin-right:10px; }
+      .note { margin-top:0px; font-size:11px; color:#AEAEAE;}
+    </style>
+    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+    <script type="text/javascript" src="js/materialize_v1.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400|Sintony:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script>
+      var whTooltips = {colorLinks: true, iconizeLinks: true, iconSize: 'medium', renameLinks: true};
+      $(document).ready(function() {
+        // There is a race condition on first load whereby if this asset loads first, it won't process the links into
+        // beautiful wowhead links. The only way we've found around this is by putting in a manual delay.
+        setTimeout(function() { loadWowheadScript(); }, 1000);
+      });
+
+      function loadWowheadScript() {
+        $.getScript("https://wow.zamimg.com/widgets/power.js");
+      }	
+    </script>
+    
+    <script>
+      $(document).ready(function(){
+        $('select').formSelect();
+        $('.sidenav').sidenav();   
+    });
+    </script>
+    <style type="text/css">
+      /*#dropdown-input-field { margin-top:0;}*/
+    </style>
+    <!-- Template -->
+    <script id="hidden-template" type="text/x-custom-template">
+        <div class="tnt-raider v2">
+          <div class="">
+            <div class="item-info"></div>
+          </div>
+        </div>
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153156619-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-153156619-1');
+    </script>
+  </head>
+
+  <body>  
+    <div id="header">
+      <div class="global-nav container">
+        <div class="row">
+          <div class="col l5 s10">
+            <a href="index.html"><div class="logo"></div></a>
+          </div>
+          <div class="col l7 s2">
+            <nav class="main-nav">
+              <a href="#" data-target="mobile-nav" class="sidenav-trigger global-nav-hamburger"><i class="material-icons">menu</i></a>
+              <div class="right hide-on-med-and-down">
+                <a href="index.html">Loot Config</a>
+                <a href="loot-history.html">Loot History</a>
+                <a class="active" href="dkp-ledger.html">DKP Ledger</a>
+                <a href="dkp-system.html">DKP System Info</a>
+                <a href="faq.html">FAQ</a>
+                <a href="guild-bank.html">Guild Bank</a>
+              </div>
+            </nav>
+            
+            <ul class="sidenav" id="mobile-nav">
+              <li><a href="index.html">Loot Config</a></li>
+              <li><a href="loot-history.html">Loot History</a></li>
+              <li><a class="active" href="dkp-ledger.html">DKP Ledger</a></li>
+              <li><a href="dkp-system.html">DKP System Info</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="guild-bank.html">Guild Bank</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div><!-- /header -->
+
+
+
+    <div id="sh-loot-config" class="section section-header valign-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col l12"><h3 class="center-align">DKP Ledger</h3>
+          <p id="lastUpdated" class="center-align" style="color:white;">A history of all of our DKP Transactions</p>            
+          </div>
+        </div>
+      </div> 
+    </div>
+      
+    <div class="section">
+        <div class="container cinched">
+            <table id="loot-history-table">
+                <tr>
+                    <th>Date</th>
+                    <th>Tier</th>
+                    <th>Loot Mode</th>
+                    <th>Player</th>
+                    <th>DKP Before</th>
+                    <th>DKP After</th>
+                    <th>Message</th>
+                  </tr>
+            </table>
+        </div>
+    </div>
+      
+    <footer class="page-footer">
+      <div class="footer-copyright">
+        <div class="container">
+        © 2021 There's No Tomorrow.
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript"  src="js/dkp-ledger_v1.js"></script>
+  </body>
+</html>
