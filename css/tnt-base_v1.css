@@ -141,6 +141,7 @@ p strong { font-weight:bold; }
 @media all and (max-width: 1200px) {
   .card-raider .raider-info { padding:20px; }
   .container.cinched { width: 58%; }
+  .container.medium { width: 80%; }
 }
 
 @media only screen and (min-width: 993px) {

@@ -35,13 +35,22 @@ function populateLedger(transactionHistoryJson) {
     var dkpAfterCell = row.insertCell(5);
     var messageCell = row.insertCell(6);
 
+    var dkpBefore = parseFloat(transactionHistoryJson[i].DKPBefore.N);
+    var dkpAfter = parseFloat(transactionHistoryJson[i].DKPAfter.N);
+    var dkpAfterColor = "black";
+    if (dkpAfter > dkpBefore) {
+      dkpAfterColor = "green";
+    } else if (dkpAfter < dkpBefore) {
+      var dkpAfterColor = "red";
+    }
+
     // Add some text to the new cells:
-    dateCell.innerHTML = transactionHistoryJson[i].ReadableTimestamp;
-    contentTierCell.innerHTML = transactionHistoryJson[i].ContentTier;
-    lootModeCell.innerHTML = transactionHistoryJson[i].LootMode;
-    playerCell.innerHTML = transactionHistoryJson[i].Recipient;
-    dkpBeforeCell.innerHTML = transactionHistoryJson[i].DKPBefore;
-    dkpAfterCell.innerHTML = transactionHistoryJson[i].DKPAfter;
-    messageCell.innerHTML = transactionHistoryJson[i].Message;
+    dateCell.innerHTML = transactionHistoryJson[i].ReadableTimestamp.S;
+    contentTierCell.innerHTML = transactionHistoryJson[i].ContentTier.S;
+    lootModeCell.innerHTML = transactionHistoryJson[i].LootMode.S;
+    playerCell.innerHTML = transactionHistoryJson[i].Recipient.S;
+    dkpBeforeCell.innerHTML = transactionHistoryJson[i].DKPBefore.N;
+    dkpAfterCell.innerHTML = "<span style='color:" + dkpAfterColor + "'>" + transactionHistoryJson[i].DKPAfter.N + "</span>";
+    messageCell.innerHTML = transactionHistoryJson[i].Message.S;
   }
 }
