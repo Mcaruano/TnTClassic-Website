@@ -1,7 +1,7 @@
 // JavaScript Document
 
 /* JSON READING */
-var transactionHistoryLambdaUrl = 'https://tzugcssgve.execute-api.us-west-1.amazonaws.com/Base/gettransactionhistory';
+var transactionHistoryLambdaUrl = 'https://tzugcssgve.execute-api.us-west-1.amazonaws.com/Base/gettransactionhistory?playerName=Akaran&lootMode=ALL';
 var transactionHistoryLambdaRequest = new XMLHttpRequest();
 transactionHistoryLambdaRequest.open('GET', transactionHistoryLambdaUrl);
 transactionHistoryLambdaRequest.responseType = 'json';
@@ -9,16 +9,16 @@ transactionHistoryLambdaRequest.send();
 
 transactionHistoryLambdaRequest.onload = function () {
   var transactionHistoryJson = transactionHistoryLambdaRequest.response;
+  var statusCode = transactionHistoryLambdaRequest.status;
   populateLedger(transactionHistoryJson);
 }
 
 function populateLedger(transactionHistoryJson) {
+  var tableBody = document.getElementById("loot-history-table-body");
   for (var i = 0; i < transactionHistoryJson.length; i++) {
 
-    var table = document.getElementById("loot-history-table");
-
     // Need to offset by one to account for the title row
-    var row = table.insertRow(i + 1);
+    var row = tableBody.insertRow(i);
 
     // td0 = Player
     // td1 = Date
@@ -53,4 +53,44 @@ function populateLedger(transactionHistoryJson) {
     dkpAfterCell.innerHTML = "<span style='color:" + dkpAfterColor + "'>" + transactionHistoryJson[i].DKPAfter.N + "</span>";
     messageCell.innerHTML = transactionHistoryJson[i].Message.S;
   }
+}
+
+/*
+ * When the website user types a player name in the search bar and clicks "Go", we initiate
+ * a new request to the lambda with the given query params and then reload the contents of
+ * the table
+ */
+function queryLedger(playerName, lootMode) {
+  // Clear the existing table
+  clearTable();
+
+  var transactionHistoryLambdaUrl = 'https://tzugcssgve.execute-api.us-west-1.amazonaws.com/Base/gettransactionhistory?playerName=' + playerName + '&lootMode=' + lootMode;
+  var transactionHistoryLambdaRequest = new XMLHttpRequest();
+  transactionHistoryLambdaRequest.open('GET', transactionHistoryLambdaUrl);
+  transactionHistoryLambdaRequest.responseType = 'json';
+  transactionHistoryLambdaRequest.send();
+
+  transactionHistoryLambdaRequest.onload = function () {
+    var transactionHistoryJson = transactionHistoryLambdaRequest.response;
+    var statusCode = transactionHistoryLambdaRequest.status;
+
+    // If we got an Error, a message will be included in the response. We simply surface this message
+    if (statusCode == 500) {
+      var errorMsg = transactionHistoryJson.ErrorMessage;
+      var tableBody = document.getElementById("loot-history-table-body");
+      var row = tableBody.insertRow(0);
+      var errorCell = row.insertCell(0);
+      errorCell.innerHTML = errorMsg;
+      errorCell.setAttribute("colspan", 7);
+      return;
+    }
+
+    // Re-populate the table with the new rows
+    populateLedger(transactionHistoryJson);
+  }
+}
+
+function clearTable() {
+  var tableBody = document.getElementById("loot-history-table-body");
+  tableBody.innerHTML = "";
 }

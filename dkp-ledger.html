@@ -104,16 +104,31 @@
       
     <div class="section">
         <div class="container medium">
+            <div>
+              <span style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                <input id="ledger-input-text" type="text" placeholder="Type in a player name to query. THIS FIELD IS CASE-SENSITIVE" name="search">
+                <select id="ledger-lootmode-sort">
+                    <option value="ALL">All</option>
+                    <option value="PRIORITY">Priority</option>
+                    <option value="LOTTERY">Lottery</option>
+                  </select>
+                <button type="submit" style="padding: 9px 24px;" onclick="queryLedger(document.getElementById('ledger-input-text').value, document.getElementById('ledger-lootmode-sort').value)">Go</button>
+              </span>
+            </div>
             <table id="loot-history-table">
-                <tr>
-                    <th style="width:120px">Player</th>
-                    <th style="width:200px">Date</th>
-                    <th style="width:50px">Tier</th>
-                    <th style="width:130px">Loot Mode</th>
-                    <th style="width:130px">DKP Before</th>
-                    <th style="width:130px">DKP After</th>
-                    <th style="width:300px">Message</th>
-                  </tr>
+                <thead>
+                    <tr>
+                        <th style="width:120px">Player</th>
+                        <th style="width:200px">Date</th>
+                        <th style="width:50px">Tier</th>
+                        <th style="width:130px">Loot Mode</th>
+                        <th style="width:130px">DKP Before</th>
+                        <th style="width:130px">DKP After</th>
+                        <th style="width:300px">Message</th>
+                    </tr>
+                </thead>
+                <tbody id='loot-history-table-body'>
+                </tbody>
             </table>
         </div>
     </div>
