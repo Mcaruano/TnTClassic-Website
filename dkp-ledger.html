@@ -107,12 +107,15 @@
             <div>
               <span style="display:flex; flex-direction: row; justify-content: center; align-items: center">
                 <input id="ledger-input-text" type="text" placeholder="Type in a player name to query. THIS FIELD IS CASE-SENSITIVE" name="search">
-                <select id="ledger-lootmode-sort">
+                <select id="ledger-lootmode-select">
                     <option value="ALL">All</option>
                     <option value="PRIORITY">Priority</option>
                     <option value="LOTTERY">Lottery</option>
                   </select>
-                <button type="submit" style="padding: 9px 24px;" onclick="queryLedger(document.getElementById('ledger-input-text').value, document.getElementById('ledger-lootmode-sort').value)">Go</button>
+                  <select id="ledger-contenttier-select">
+                      <option value="T4">T4</option>
+                    </select>
+                <button type="submit" style="padding: 9px 24px;" onclick="queryLedger(document.getElementById('ledger-input-text').value, document.getElementById('ledger-lootmode-select').value, document.getElementById('ledger-contenttier-select').value)">Go</button>
               </span>
             </div>
             <table id="loot-history-table">

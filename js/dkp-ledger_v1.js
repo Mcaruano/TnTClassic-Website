@@ -1,7 +1,7 @@
 // JavaScript Document
 
 /* JSON READING */
-var transactionHistoryLambdaUrl = 'https://tzugcssgve.execute-api.us-west-1.amazonaws.com/Base/gettransactionhistory?playerName=Akaran&lootMode=ALL';
+var transactionHistoryLambdaUrl = 'https://tzugcssgve.execute-api.us-west-1.amazonaws.com/Base/gettransactionhistory?playerName=Akaran&lootMode=ALL&contentTier=T4';
 var transactionHistoryLambdaRequest = new XMLHttpRequest();
 transactionHistoryLambdaRequest.open('GET', transactionHistoryLambdaUrl);
 transactionHistoryLambdaRequest.responseType = 'json';
@@ -60,11 +60,11 @@ function populateLedger(transactionHistoryJson) {
  * a new request to the lambda with the given query params and then reload the contents of
  * the table
  */
-function queryLedger(playerName, lootMode) {
+function queryLedger(playerName, lootMode, contentTier) {
   // Clear the existing table
   clearTable();
 
-  var transactionHistoryLambdaUrl = 'https://tzugcssgve.execute-api.us-west-1.amazonaws.com/Base/gettransactionhistory?playerName=' + playerName + '&lootMode=' + lootMode;
+  var transactionHistoryLambdaUrl = 'https://tzugcssgve.execute-api.us-west-1.amazonaws.com/Base/gettransactionhistory?playerName=' + playerName + '&lootMode=' + lootMode + '&contentTier=' + contentTier;
   var transactionHistoryLambdaRequest = new XMLHttpRequest();
   transactionHistoryLambdaRequest.open('GET', transactionHistoryLambdaUrl);
   transactionHistoryLambdaRequest.responseType = 'json';
