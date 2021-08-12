@@ -43,7 +43,7 @@ def lambda_handler(event, context):
     playerName = event["queryStringParameters"]["playerName"]
     lootMode = event["queryStringParameters"]["lootMode"]
     contentTier = event["queryStringParameters"]["contentTier"] 
-    ddbResults = query_ddb_index(playerName, lootMode, "T4") # Pass in the contentTier variable once I add the ContentTier drop-down
+    ddbResults = query_ddb_index(playerName, lootMode, contentTier)
     
     # Format the Lambda response to adhere to the standard Response structure
     properlyFormattedResponse = {}
