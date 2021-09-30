@@ -1,7 +1,7 @@
 // JavaScript Document
 
-/* JSON READING */
-var transactionHistoryLambdaUrl = 'https://tzugcssgve.execute-api.us-west-1.amazonaws.com/Base/gettransactionhistory?playerName=Akaran&lootMode=ALL&contentTier=T4';
+/* Initial load of page - query for Akaran for T5 */
+var transactionHistoryLambdaUrl = 'https://tzugcssgve.execute-api.us-west-1.amazonaws.com/Base/gettransactionhistory?playerName=Akaran&lootMode=ALL&contentTier=T5';
 var transactionHistoryLambdaRequest = new XMLHttpRequest();
 transactionHistoryLambdaRequest.open('GET', transactionHistoryLambdaUrl);
 transactionHistoryLambdaRequest.responseType = 'json';
